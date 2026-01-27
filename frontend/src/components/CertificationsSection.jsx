@@ -1,8 +1,30 @@
-import React from 'react';
-import { Award, Calendar, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { Award, Calendar, ExternalLink, X, Download, Eye } from 'lucide-react';
 import { profileData } from '../data/mock';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from './ui/dialog';
 
 const CertificationsSection = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCertClick = (cert) => {
+    if (cert.certificateUrl) {
+      setSelectedCert(cert);
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleDownload = () => {
+    if (selectedCert?.certificateUrl) {
+      window.open(selectedCert.certificateUrl, '_blank');
+    }
+  };
+
   return (
     <section id="certifications" className="py-24 bg-[#1a1c1b]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -13,7 +35,7 @@ const CertificationsSection = () => {
             Professional <span className="text-[#888680]">Certifications</span>
           </h2>
           <p className="text-[#888680] mt-4 max-w-2xl">
-            Industry-recognized certifications validating expertise in cybersecurity, networking, and cloud technologies.
+            Industry-recognized certifications validating expertise in cybersecurity, networking, and cloud technologies. Click on any certificate to view the original credential.
           </p>
         </div>
 
@@ -22,14 +44,24 @@ const CertificationsSection = () => {
           {profileData.certifications.map((cert, index) => (
             <div
               key={cert.id}
-              className="group p-6 bg-[#302f2c] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300 hover:-translate-y-1"
+              onClick={() => handleCertClick(cert)}
+              className={`group p-6 bg-[#302f2c] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300 hover:-translate-y-1 ${
+                cert.certificateUrl ? 'cursor-pointer' : 'cursor-default'
+              }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 bg-[#3f4816] rounded-lg flex items-center justify-center group-hover:bg-[#d9fb06] transition-colors duration-300">
                   <Award className="w-6 h-6 text-[#d9fb06] group-hover:text-[#1a1c1b] transition-colors duration-300" />
                 </div>
-                <ExternalLink className="w-5 h-5 text-[#888680] opacity-0 group-hover:opacity-100 transition-opacity" />
+                {cert.certificateUrl ? (
+                  <div className="flex items-center gap-1 text-[#d9fb06] opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Eye className="w-4 h-4" />
+                    <span className="text-xs font-medium">View</span>
+                  </div>
+                ) : (
+                  <ExternalLink className="w-5 h-5 text-[#888680] opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
               </div>
 
               <h3 className="text-white font-semibold mb-2 group-hover:text-[#d9fb06] transition-colors">
@@ -40,9 +72,16 @@ const CertificationsSection = () => {
                 {cert.issuer}
               </p>
 
-              <div className="flex items-center gap-2 text-[#888680] text-sm">
-                <Calendar className="w-4 h-4" />
-                <span>{cert.date}</span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-[#888680] text-sm">
+                  <Calendar className="w-4 h-4" />
+                  <span>{cert.date}</span>
+                </div>
+                {cert.certificateUrl && (
+                  <span className="text-xs text-[#888680] bg-[#1a1c1b] px-2 py-1 rounded-full">
+                    {cert.certificateType === 'pdf' ? 'PDF' : 'Image'}
+                  </span>
+                )}
               </div>
             </div>
           ))}
@@ -68,6 +107,52 @@ const CertificationsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] bg-[#1a1c1b] border-[#3f4816] p-0 overflow-hidden">
+          <DialogHeader className="p-6 pb-4 border-b border-[#3f4816]">
+            <div className="flex items-start justify-between">
+              <div>
+                <DialogTitle className="text-xl font-bold text-white mb-1">
+                  {selectedCert?.name}
+                </DialogTitle>
+                <p className="text-[#d9fb06] text-sm font-medium">
+                  Issued by {selectedCert?.issuer} • {selectedCert?.date}
+                </p>
+              </div>
+              <button
+                onClick={handleDownload}
+                className="flex items-center gap-2 px-4 py-2 bg-[#d9fb06] text-[#1a1c1b] rounded-full font-semibold text-sm hover:scale-105 transition-transform"
+              >
+                <Download className="w-4 h-4" />
+                Open Full
+              </button>
+            </div>
+          </DialogHeader>
+          
+          <div className="p-6 overflow-auto max-h-[calc(90vh-120px)]">
+            {selectedCert?.certificateType === 'image' ? (
+              <img
+                src={selectedCert.certificateUrl}
+                alt={`${selectedCert.name} Certificate`}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            ) : selectedCert?.certificateType === 'pdf' ? (
+              <div className="w-full">
+                <iframe
+                  src={`${selectedCert.certificateUrl}#toolbar=0&navpanes=0`}
+                  className="w-full h-[600px] rounded-lg border border-[#3f4816]"
+                  title={`${selectedCert.name} Certificate`}
+                />
+                <p className="text-center text-[#888680] text-sm mt-4">
+                  If the PDF doesn't load, click "Open Full" to view in a new tab.
+                </p>
+              </div>
+            ) : null}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
