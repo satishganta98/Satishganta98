@@ -97,43 +97,58 @@ export const profileData = {
       id: 1,
       name: "CompTIA Security+",
       issuer: "CompTIA",
-      date: "Nov 2025"
+      date: "Nov 2025",
+      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/r3es10x3_CompTIA%20Security%2B%20ce%20certificate.pdf",
+      certificateType: "pdf"
     },
     {
       id: 2,
       name: "CompTIA Network+",
       issuer: "CompTIA",
-      date: "Nov 2025"
+      date: "Nov 2025",
+      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/88z1jm05_CompTIA%20Network%2B%20ce%20certificate.pdf",
+      badgeUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/7gahacak_Network%2B-jpg.jpg",
+      certificateType: "pdf"
     },
     {
       id: 3,
       name: "CompTIA CySA+ Certification",
       issuer: "CompTIA",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/jvj5iuq8_CompTIA%20CySA%2B%20ce%20certificate.pdf",
+      certificateType: "pdf"
     },
     {
       id: 4,
       name: "Splunk Certified Cybersecurity Defense Analyst",
       issuer: "Splunk",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/hr3gw0dv_SCCDA%20Cert.png",
+      certificateType: "image"
     },
     {
       id: 5,
       name: "Career Essentials in System Administration",
       issuer: "Microsoft & LinkedIn",
-      date: "Nov 2025"
+      date: "Nov 2025",
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 6,
       name: "CompTIA Security Analytics Professional – CSAP",
       issuer: "CompTIA",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 7,
       name: "SC-300 Identity and Access Administrator",
       issuer: "Microsoft",
-      date: "Jan 2026"
+      date: "Jan 2026",
+      certificateUrl: null,
+      certificateType: null
     }
   ]
 };
