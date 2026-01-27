@@ -140,14 +140,22 @@ const CertificationsSection = () => {
               />
             ) : selectedCert?.certificateType === 'pdf' ? (
               <div className="w-full">
-                <iframe
-                  src={`${selectedCert.certificateUrl}#toolbar=0&navpanes=0`}
-                  className="w-full h-[600px] rounded-lg border border-[#3f4816]"
-                  title={`${selectedCert.name} Certificate`}
-                />
-                <p className="text-center text-[#888680] text-sm mt-4">
-                  If the PDF doesn't load, click "Open Full" to view in a new tab.
-                </p>
+                <div className="bg-[#302f2c] rounded-xl p-8 text-center border border-[#3f4816]">
+                  <div className="w-20 h-20 bg-[#3f4816] rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Award className="w-10 h-10 text-[#d9fb06]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{selectedCert.name}</h3>
+                  <p className="text-[#888680] mb-6">
+                    This certificate is available as a PDF document. Click the button below to view or download the official credential.
+                  </p>
+                  <button
+                    onClick={handleDownload}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#d9fb06] text-[#1a1c1b] rounded-full font-bold text-sm uppercase tracking-wider hover:scale-105 transition-transform"
+                  >
+                    <Download className="w-5 h-5" />
+                    View PDF Certificate
+                  </button>
+                </div>
               </div>
             ) : null}
           </div>
