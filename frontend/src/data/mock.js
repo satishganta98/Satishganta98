@@ -1,0 +1,139 @@
+export const profileData = {
+  name: "Satish Kumar Ganta",
+  title: "Cybersecurity Analyst & SOC Officer",
+  tagline: "Protecting Digital Assets. Hunting Threats. Securing the Future.",
+  email: "gsk07818@gmail.com",
+  phone: "+353876498503",
+  location: "Dublin, Ireland",
+  linkedin: "https://linkedin.com/in/satishkumarganta",
+  about: "Results-driven Cybersecurity Professional with expertise in Security Operations Center (SOC) activities, threat detection, and incident response. Currently serving as a SOC Officer at Accenture, I specialize in leveraging SIEM tools like Splunk Enterprise to identify and mitigate security threats. With a Master's degree in Data Analytics and a strong foundation in machine learning, I bring a unique analytical approach to cybersecurity challenges.",
+  
+  skills: {
+    technical: [
+      "Splunk Enterprise",
+      "SIEM & EDR Tools",
+      "Host & Network Forensics",
+      "Malware Analysis",
+      "SOC & Blue Team Operations",
+      "Incident Response",
+      "Threat Hunting",
+      "Log Analysis",
+      "Remediation Planning",
+      "Cyber Threat Intelligence (CTI)",
+      "Cloud Security (Azure/AWS)",
+      "Security Audit",
+      "Python",
+      "SQL"
+    ],
+    tools: [
+      "Splunk",
+      "Power BI",
+      "Tableau",
+      "MS Excel",
+      "Docker",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "NLTK"
+    ],
+    professional: [
+      "Problem-Solving",
+      "Clear Communication",
+      "Technical Report Writing",
+      "Executive Reporting",
+      "Client Interface",
+      "Team Collaboration"
+    ]
+  },
+  
+  experience: [
+    {
+      id: 1,
+      company: "Accenture",
+      role: "Response & SOC Officer",
+      location: "Dublin, County Dublin, Ireland",
+      duration: "Jan 2025 — Present",
+      highlights: [
+        "Managed immediate responses to security alerts, reducing potential threat impact on Accenture operations by an estimated 15% monthly through timely actions.",
+        "Used Splunk Enterprise for detection logs and analysis, identifying and escalating an average of 10 critical security incidents each week.",
+        "Assessed existing security protocols and integrated new measures to strengthen overall defense, enhancing protection against common cyber threats by 20%.",
+        "Collaborated with internal teams to share incident findings, developing clear reports that helped improve security awareness and response readiness by 10%."
+      ]
+    },
+    {
+      id: 2,
+      company: "Melmaa Tech",
+      role: "Machine Learning and Data Analytics Intern",
+      location: "Hyderabad, Telangana, India",
+      duration: "Jul 2022 — Jan 2023",
+      highlights: [
+        "Preprocessed large and complex datasets using Pandas and NumPy, preparing data for analysis and improving processing efficiency by 25% for various projects.",
+        "Implemented machine learning models with Scikit-learn for predictive analytics, providing insights that supported business decisions and improved forecast accuracy by 15%.",
+        "Visualized complex data trends using Power BI and Tableau, creating clear dashboards that helped stakeholders understand key performance metrics by 20%.",
+        "Managed and extracted data from SQL (PostgreSQL) databases, ensuring data integrity and efficient retrieval for analytical reporting purposes in projects."
+      ]
+    }
+  ],
+  
+  education: [
+    {
+      id: 1,
+      degree: "Master's Degree in Data Analytics",
+      institution: "National College of Ireland",
+      duration: "Sept 2023 — Nov 2024",
+      coursework: "Advanced Data Mining, Big Data Analytics, Statistical Modeling, Machine Learning Algorithms, Data Visualization"
+    },
+    {
+      id: 2,
+      degree: "Bachelor of Technology (BTech) in Computer Science",
+      institution: "Indian Institute Of Industry Interaction Education and Research",
+      duration: "Jul 2018 — Apr 2022",
+      coursework: "Data Structures and Algorithms, Operating Systems, Computer Networks, Database Management Systems, Introduction to Cyber Security"
+    }
+  ],
+  
+  certifications: [
+    {
+      id: 1,
+      name: "CompTIA Security+",
+      issuer: "CompTIA",
+      date: "Nov 2025"
+    },
+    {
+      id: 2,
+      name: "CompTIA Network+",
+      issuer: "CompTIA",
+      date: "Nov 2025"
+    },
+    {
+      id: 3,
+      name: "CompTIA CySA+ Certification",
+      issuer: "CompTIA",
+      date: "Dec 2025"
+    },
+    {
+      id: 4,
+      name: "Splunk Certified Cybersecurity Defense Analyst",
+      issuer: "Splunk",
+      date: "Dec 2025"
+    },
+    {
+      id: 5,
+      name: "Career Essentials in System Administration",
+      issuer: "Microsoft & LinkedIn",
+      date: "Nov 2025"
+    },
+    {
+      id: 6,
+      name: "CompTIA Security Analytics Professional – CSAP",
+      issuer: "CompTIA",
+      date: "Dec 2025"
+    },
+    {
+      id: 7,
+      name: "SC-300 Identity and Access Administrator",
+      issuer: "Microsoft",
+      date: "Jan 2026"
+    }
+  ]
+};
