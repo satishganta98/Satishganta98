@@ -130,9 +130,9 @@ export const profileData = {
       id: 5,
       name: "Career Essentials in System Administration",
       issuer: "Microsoft & LinkedIn",
-      date: "Nov 2025",
-      certificateUrl: null,
-      certificateType: null
+      date: "Dec 2025",
+      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/lj0j1mc5_IMG_2225.jpeg",
+      certificateType: "image"
     },
     {
       id: 6,
