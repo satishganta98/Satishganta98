@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Linkedin, Mail, ArrowUp } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const Footer = () => {
