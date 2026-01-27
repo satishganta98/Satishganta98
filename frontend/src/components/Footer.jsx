@@ -20,7 +20,8 @@ const Footer = () => {
                 <img 
                   src="https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/e3jsphtd_IMG_9529.jpeg" 
                   alt="Satish Kumar Ganta"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: '50% 20%' }}
                 />
               </div>
               <span className="text-white font-bold text-xl">Satish Kumar Ganta</span>
