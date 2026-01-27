@@ -45,7 +45,7 @@ const Navbar = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/e3jsphtd_IMG_9529.jpeg" 
                 alt="Satish Kumar Ganta"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <span className="text-white font-bold text-lg tracking-tight hidden sm:block">Satish<span className="text-[#d9fb06]">.</span></span>
