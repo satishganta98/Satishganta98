@@ -40,6 +40,14 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Projects Section -->
+    <url>
+        <loc>https://satishganta98.github.io/Satishganta98/#projects</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
     <!-- Certifications Section -->
     <url>
         <loc>https://satishganta98.github.io/Satishganta98/#certifications</loc>

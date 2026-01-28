@@ -119,6 +119,129 @@ export const profileData = {
     }
   ],
   
+  projects: [
+    {
+      id: 1,
+      title: "SIEM Automation & Alert Optimization Platform",
+      category: "SIEM & Automation",
+      description: "Developed an automated alert correlation system using Splunk SPL and Python to reduce false positives and improve SOC efficiency. Implemented custom detection rules and automated response workflows.",
+      technologies: ["Splunk Enterprise", "Python", "SPL", "REST API", "JSON"],
+      highlights: [
+        "Reduced false positive alerts by 35% through intelligent correlation logic",
+        "Automated tier-1 incident categorization saving 15+ hours weekly",
+        "Created 20+ custom Splunk dashboards for real-time threat visibility",
+        "Integrated with ticketing systems for automated incident escalation"
+      ],
+      metrics: {
+        impact: "35% reduction in false positives",
+        efficiency: "15 hours saved per week",
+        coverage: "20+ custom detection rules"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Production"
+    },
+    {
+      id: 2,
+      title: "Threat Hunting Dashboard with ML Anomaly Detection",
+      category: "Threat Hunting",
+      description: "Built an advanced threat hunting platform combining Splunk analytics with Python-based machine learning models to identify anomalous user behavior and potential insider threats.",
+      technologies: ["Splunk", "Python", "Scikit-learn", "Pandas", "Power BI", "UEBA"],
+      highlights: [
+        "Implemented ML models (Isolation Forest, LSTM) for behavioral anomaly detection",
+        "Detected 12 potential insider threat indicators in testing phase",
+        "Created interactive Power BI dashboards for executive reporting",
+        "Integrated threat intelligence feeds for enhanced context"
+      ],
+      metrics: {
+        accuracy: "92% anomaly detection rate",
+        detection: "12 threats identified",
+        responseTime: "<30 min average investigation"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Active Development"
+    },
+    {
+      id: 3,
+      title: "Automated Incident Response Playbook System",
+      category: "Incident Response",
+      description: "Designed and implemented automated incident response playbooks for common attack scenarios including phishing, malware infections, and data exfiltration attempts.",
+      technologies: ["Python", "Splunk SOAR", "MITRE ATT&CK", "Bash", "PowerShell"],
+      highlights: [
+        "Created 15+ automated playbooks covering MITRE ATT&CK techniques",
+        "Reduced mean time to respond (MTTR) by 40% for common incidents",
+        "Automated evidence collection and containment actions",
+        "Integrated with EDR tools for automated host isolation"
+      ],
+      metrics: {
+        playbooks: "15+ automated workflows",
+        mttr: "40% faster response time",
+        automation: "70% of tier-1 tasks automated"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Production"
+    },
+    {
+      id: 4,
+      title: "Cloud Security Monitoring for AWS & Azure",
+      category: "Cloud Security",
+      description: "Developed comprehensive cloud security monitoring solution for multi-cloud environments, tracking misconfigurations, unauthorized access, and compliance violations.",
+      technologies: ["AWS CloudTrail", "Azure Sentinel", "Splunk", "Python", "Terraform"],
+      highlights: [
+        "Monitored 500+ cloud resources across AWS and Azure environments",
+        "Detected and remediated 25+ security misconfigurations",
+        "Implemented automated compliance checking against CIS benchmarks",
+        "Created real-time alerting for suspicious IAM activity"
+      ],
+      metrics: {
+        coverage: "500+ cloud resources",
+        findings: "25+ misconfigurations fixed",
+        compliance: "95% CIS benchmark adherence"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Production"
+    },
+    {
+      id: 5,
+      title: "Phishing Detection & Response Framework",
+      category: "Email Security",
+      description: "Built an intelligent phishing detection system using NLP and machine learning to analyze email content, URLs, and attachments for malicious indicators.",
+      technologies: ["Python", "NLTK", "Scikit-learn", "VirusTotal API", "Splunk"],
+      highlights: [
+        "Analyzed 10,000+ emails with 94% phishing detection accuracy",
+        "Automated URL and attachment sandboxing with VirusTotal integration",
+        "Created user reporting portal for suspected phishing emails",
+        "Generated executive reports on phishing trends and user training needs"
+      ],
+      metrics: {
+        accuracy: "94% detection rate",
+        volume: "10,000+ emails analyzed",
+        response: "Automated URL/file scanning"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Production"
+    },
+    {
+      id: 6,
+      title: "Network Traffic Analysis & Threat Intelligence Platform",
+      category: "Network Security",
+      description: "Developed a network traffic analysis tool that correlates flow data with threat intelligence feeds to identify command-and-control communications and data exfiltration.",
+      technologies: ["Python", "Zeek", "Splunk", "Threat Intelligence APIs", "Docker"],
+      highlights: [
+        "Processed 1TB+ of network traffic data daily",
+        "Integrated 5+ threat intelligence feeds (AlienVault, VirusTotal, AbuseIPDB)",
+        "Identified 50+ IOCs matching known malware C2 servers",
+        "Automated blocking of malicious IPs via firewall integration"
+      ],
+      metrics: {
+        dataVolume: "1TB+ daily traffic",
+        iocs: "50+ malicious indicators found",
+        feeds: "5 threat intel sources"
+      },
+      github: "https://github.com/satishganta98",
+      status: "Production"
+    }
+  ],
+
   certifications: [
     {
       id: 1,

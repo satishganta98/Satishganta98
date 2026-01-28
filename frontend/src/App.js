@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import EducationSection from "./components/EducationSection";
+import ProjectsSection from "./components/ProjectsSection";
 import CertificationsSection from "./components/CertificationsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ function App() {
         <SkillsSection />
         <ExperienceSection />
         <EducationSection />
+        <ProjectsSection />
         <CertificationsSection />
         <ContactSection />
       </main>
