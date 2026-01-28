@@ -30,7 +30,10 @@ const CertificationsSection = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="mb-16">
-          <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Credentials</span>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Credentials</span>
+            <span className="px-3 py-1 bg-[#d9fb06] text-[#1a1c1b] text-xs font-bold rounded-full">{profileData.certifications.length}</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
             Professional <span className="text-[#888680]">Certifications</span>
           </h2>

@@ -8,6 +8,32 @@ export const profileData = {
   linkedin: "https://linkedin.com/in/satishkumarganta",
   about: "Results-driven Cybersecurity Professional with expertise in Security Operations Center (SOC) activities, threat detection, and incident response. Currently serving as a SOC Officer at Accenture, I specialize in leveraging SIEM tools like Splunk Enterprise to identify and mitigate security threats. With a Master's degree in Data Analytics and a strong foundation in machine learning, I bring a unique analytical approach to cybersecurity challenges.",
   
+  stats: [
+    { label: "Years in Cybersecurity", value: "2+" },
+    { label: "Industry Certifications", value: "7" },
+    { label: "Security Incidents Handled", value: "500+" },
+    { label: "Avg Response Time", value: "<1hr" }
+  ],
+
+  achievements: [
+    {
+      title: "15% Threat Reduction",
+      description: "Reduced potential threat impact on operations monthly through timely incident response actions."
+    },
+    {
+      title: "40+ Weekly Alerts",
+      description: "Identified and escalated an average of 10 critical security incidents each week using Splunk Enterprise."
+    },
+    {
+      title: "20% Security Enhancement",
+      description: "Assessed existing protocols and integrated new measures to strengthen defense against cyber threats."
+    },
+    {
+      title: "10% Awareness Improvement",
+      description: "Developed clear incident reports improving security awareness and response readiness across teams."
+    }
+  ],
+
   skills: {
     technical: [
       "Splunk Enterprise",

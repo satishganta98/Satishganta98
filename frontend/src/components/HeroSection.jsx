@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, ArrowDown, Shield, Terminal, Download } from 'lucide-react';
+import { MapPin, Mail, ArrowDown, Shield, Terminal, Download, TrendingUp } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const HeroSection = () => {
@@ -79,6 +79,29 @@ const HeroSection = () => {
                 <Download className="w-4 h-4" />
                 Download CV
               </a>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-[#3f4816]">
+              {profileData.stats.map((stat, index) => (
+                <div key={index} className="pt-6">
+                  <div className="text-2xl md:text-3xl font-black text-[#d9fb06]">{stat.value}</div>
+                  <div className="text-xs md:text-sm text-[#888680] mt-2 uppercase tracking-wider">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Key Achievements */}
+            <div className="mt-12 grid md:grid-cols-2 gap-4">
+              {profileData.achievements.map((achievement, index) => (
+                <div key={index} className="flex gap-3 p-4 bg-[#302f2c]/50 rounded-lg border border-[#3f4816]/50">
+                  <TrendingUp className="w-5 h-5 text-[#d9fb06] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-bold text-white text-sm">{achievement.title}</div>
+                    <div className="text-[#888680] text-xs mt-1">{achievement.description}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
