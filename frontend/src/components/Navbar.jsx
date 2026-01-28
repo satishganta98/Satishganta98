@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Github, Moon, Sun } from 'lucide-react';
+import { Menu, X, Shield, Github } from 'lucide-react';
 import { profileData } from '../data/mock';
-import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { isDark, toggleTheme, colors } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +68,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* GitHub Link & Theme Toggle */}
+          {/* GitHub Link & CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href={profileData.github}
@@ -83,15 +81,6 @@ const Navbar = () => {
               <span className="text-sm">GitHub</span>
             </a>
 
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg transition-colors bg-[#302f2c] hover:bg-[#3d3c38] text-[#d9fb06]"
-              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
             {/* CTA Button */}
             <a
               href="#contact"
@@ -103,21 +92,12 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg transition-colors bg-[#302f2c] hover:bg-[#3d3c38] text-[#d9fb06]"
-              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-[#d9fb06] hover:bg-[#302f2c] rounded-lg transition-colors"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-[#d9fb06] hover:bg-[#302f2c] rounded-lg transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}

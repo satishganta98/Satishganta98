@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -14,22 +13,20 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="App bg-[#1a1c1b] min-h-screen">
-        <Navbar />
-        <main>
-          <HeroSection />
-          <AboutSection />
-          <SkillsSection />
-          <ExperienceSection />
-          <EducationSection />
-          <ProjectsSection />
-          <CertificationsSection />
-          <ContactSection />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="App bg-[#1a1c1b] min-h-screen">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <ProjectsSection />
+        <CertificationsSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
