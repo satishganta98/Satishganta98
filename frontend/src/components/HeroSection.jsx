@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, ArrowDown, Shield, Terminal, Download, TrendingUp } from 'lucide-react';
+import { MapPin, Mail, ArrowDown, Shield, Terminal, Download, TrendingUp, Linkedin } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const HeroSection = () => {
@@ -78,6 +78,15 @@ const HeroSection = () => {
               >
                 <Download className="w-4 h-4" />
                 Download CV
+              </a>
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#0077b5] text-[#0077b5] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#0077b5] hover:text-white transition-all duration-300"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
               </a>
             </div>
 
