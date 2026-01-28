@@ -1,72 +1,71 @@
 /* Portfolio Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+/* CSS Variables for Theme */
+:root[data-theme="dark"] {
+  --bg-primary: #1a1c1b;
+  --bg-secondary: #302f2c;
+  --bg-tertiary: #3d3c38;
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --text-tertiary: #808080;
+  --accent: #d9fb06;
+  --border: #3d3c38;
+}
+
+:root[data-theme="light"],
+:root {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #1a1c1b;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #808080;
+  --accent: #b8860b;
+  --border: #e0e0e0;
+}
+
 * {
   scroll-behavior: smooth;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1c1b;
-  color: #ffffff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode (Default) */
-body.dark {
-  background-color: #1a1c1b;
-  color: #ffffff;
-}
-
-/* Light Mode */
-body.light {
-  background-color: #f5f5f5;
-  color: #1a1c1b;
-}
-
-/* Custom scrollbar - Dark */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1c1b;
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f4816;
+  background: var(--border);
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d9fb06;
-}
-
-/* Scrollbar - Light Mode */
-body.light::-webkit-scrollbar-track {
-  background: #f5f5f5;
-}
-
-body.light::-webkit-scrollbar-thumb {
-  background: #cccccc;
-  border-radius: 4px;
-}
-
-body.light::-webkit-scrollbar-thumb:hover {
-  background: #b8860b;
+  background: var(--accent);
 }
 
 /* Selection color */
 ::selection {
-  background: #d9fb06;
-  color: #1a1c1b;
-}
-
-/* Light mode selection */
-body.light::selection {
-  background: #b8860b;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--bg-primary);
 }
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import { MapPin, Mail, ArrowDown, Shield, Terminal, Download, TrendingUp, Linkedin } from 'lucide-react';
 import { profileData } from '../data/mock';
+import { useTheme } from '../context/ThemeContext';
 
 const HeroSection = () => {
+  const { isDark, colors } = useTheme();
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {
@@ -11,7 +14,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#1a1c1b] flex items-center overflow-hidden">
+    <section style={{ backgroundColor: colors.bg.primary }} className="relative min-h-screen flex items-center overflow-hidden transition-colors duration-300">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -29,9 +32,9 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#302f2c] border border-[#3f4816] rounded-full">
-              <span className="w-2 h-2 bg-[#d9fb06] rounded-full animate-pulse" />
-              <span className="text-[#888680] text-sm font-medium">Available for opportunities</span>
+            <div style={{ backgroundColor: colors.bg.secondary, borderColor: colors.border }} className="inline-flex items-center gap-2 px-4 py-2 border rounded-full transition-colors duration-300">
+              <span style={{ backgroundColor: colors.accent }} className="w-2 h-2 rounded-full animate-pulse" />
+              <span style={{ color: colors.text.secondary }} className="text-sm font-medium">Available for opportunities</span>
             </div>
 
             {/* Main Heading */}

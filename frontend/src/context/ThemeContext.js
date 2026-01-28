@@ -10,15 +10,20 @@ export const ThemeProvider = ({ children }) => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setIsDark(savedTheme === 'dark');
+      document.documentElement.setAttribute('data-theme', savedTheme);
     } else {
       // Default to dark mode
       setIsDark(true);
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   }, []);
 
-  // Save theme preference to localStorage whenever it changes
+  // Save theme preference and apply to document
   useEffect(() => {
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    const theme = isDark ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
   }, [isDark]);
 
   const toggleTheme = () => {
