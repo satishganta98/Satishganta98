@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, ArrowDown, Shield, Terminal } from 'lucide-react';
+import { MapPin, Mail, ArrowDown, Shield, Terminal, Download } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const HeroSection = () => {
@@ -72,10 +72,12 @@ const HeroSection = () => {
                 Get In Touch
               </a>
               <a
-                href="#experience"
-                className="inline-flex items-center px-8 py-4 border border-[#d9fb06] text-[#d9fb06] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#d9fb06] hover:text-[#1a1c1b] transition-all duration-300"
+                href="/cv.pdf"
+                download="Satish_Kumar_Ganta_CV.pdf"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#d9fb06] text-[#d9fb06] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#d9fb06] hover:text-[#1a1c1b] transition-all duration-300"
               >
-                View Experience
+                <Download className="w-4 h-4" />
+                Download CV
               </a>
             </div>
           </div>
