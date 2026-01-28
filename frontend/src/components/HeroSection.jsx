@@ -72,31 +72,25 @@ const HeroSection = () => {
                 Get In Touch
               </a>
               
-              {/* CV Download with Dropdown */}
-              <div className="group relative">
-                <button className="inline-flex items-center gap-2 px-8 py-4 border border-[#d9fb06] text-[#d9fb06] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#d9fb06] hover:text-[#1a1c1b] transition-all duration-300">
-                  <Download className="w-4 h-4" />
-                  Download CV
-                </button>
-                
-                {/* Dropdown Menu */}
-                <div className="absolute left-0 mt-2 w-48 bg-[#302f2c] border border-[#3f4816] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-                  <a
-                    href="/cv.pdf"
-                    download="Satish_Kumar_Ganta_CV.pdf"
-                    className="block px-4 py-3 text-[#d9fb06] hover:bg-[#3f4816] first:rounded-t-lg text-sm font-medium"
-                  >
-                    Professional CV (Visual)
-                  </a>
-                  <a
-                    href="/cv-ats.txt"
-                    download="Satish_Kumar_Ganta_CV_ATS.txt"
-                    className="block px-4 py-3 text-[#d9fb06] hover:bg-[#3f4816] last:rounded-b-lg text-sm font-medium border-t border-[#3f4816]"
-                  >
-                    ATS-Optimized CV
-                  </a>
-                </div>
-              </div>
+              {/* CV Download Buttons */}
+              <a
+                href="/Satishganta98/cv.pdf"
+                download="Satish_Kumar_Ganta_CV.pdf"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#d9fb06] text-[#d9fb06] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#d9fb06] hover:text-[#1a1c1b] transition-all duration-300"
+              >
+                <Download className="w-4 h-4" />
+                Professional CV
+              </a>
+
+              <a
+                href="/Satishganta98/cv-ats.txt"
+                download="Satish_Kumar_Ganta_CV_ATS.txt"
+                className="inline-flex items-center gap-2 px-6 py-4 border border-[#888680] text-[#888680] rounded-full font-bold text-sm uppercase tracking-wider hover:border-[#d9fb06] hover:text-[#d9fb06] transition-all duration-300"
+                title="ATS-formatted CV for job applications"
+              >
+                <Download className="w-4 h-4" />
+                ATS CV
+              </a>
 
               <a
                 href={profileData.linkedin}
