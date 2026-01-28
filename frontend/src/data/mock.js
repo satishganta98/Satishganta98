@@ -79,7 +79,7 @@ export const profileData = {
       company: "Accenture",
       role: "Response & SOC Officer",
       location: "Dublin, County Dublin, Ireland",
-      duration: "Jan 2025 — Present",
+      duration: "June 2025 — Present",
       highlights: [
         "Managed immediate responses to security alerts, reducing potential threat impact on Accenture operations by an estimated 15% monthly through timely actions.",
         "Used Splunk Enterprise for detection logs and analysis, identifying and escalating an average of 10 critical security incidents each week.",
