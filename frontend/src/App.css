@@ -9,9 +9,24 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1c1b;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom scrollbar */
+/* Dark Mode (Default) */
+body.dark {
+  background-color: #1a1c1b;
+  color: #ffffff;
+}
+
+/* Light Mode */
+body.light {
+  background-color: #f5f5f5;
+  color: #1a1c1b;
+}
+
+/* Custom scrollbar - Dark */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -29,8 +44,29 @@ body {
   background: #d9fb06;
 }
 
+/* Scrollbar - Light Mode */
+body.light::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+body.light::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+
+body.light::-webkit-scrollbar-thumb:hover {
+  background: #b8860b;
+}
+
 /* Selection color */
 ::selection {
   background: #d9fb06;
   color: #1a1c1b;
 }
+
+/* Light mode selection */
+body.light::selection {
+  background: #b8860b;
+  color: #ffffff;
+}
+
