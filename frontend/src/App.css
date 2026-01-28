@@ -1,0 +1,36 @@
+/* Portfolio Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f4816;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9fb06;
+}
+
+/* Selection color */
+::selection {
+  background: #d9fb06;
+  color: #1a1c1b;
+}
