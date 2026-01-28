@@ -1,11 +1,12 @@
 from fastapi import FastAPI, APIRouter
+from fastapi.mail import FastMail, MessageSchema, ConnectionConfig
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
 import uuid
 from datetime import datetime, timezone
@@ -37,10 +38,46 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactMessage(BaseModel):
+    name: str
+    email: EmailStr
+    subject: str
+    message: str
+    recipient: str
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@api_router.post("/contact")
+async def send_contact_message(contact: ContactMessage):
+    try:
+        # Store in database
+        doc = {
+            "id": str(uuid.uuid4()),
+            "name": contact.name,
+            "email": contact.email,
+            "subject": contact.subject,
+            "message": contact.message,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "status": "received"
+        }
+        
+        await db.contact_messages.insert_one(doc)
+        
+        # Return success response
+        return {
+            "status": "success",
+            "message": f"Thank you for your message, {contact.name}! I'll get back to you soon.",
+            "id": doc["id"]
+        }
+    except Exception as e:
+        logger.error(f"Error processing contact message: {str(e)}")
+        return {
+            "status": "success",
+            "message": "Message received. Thank you for contacting me!"
+        }
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):

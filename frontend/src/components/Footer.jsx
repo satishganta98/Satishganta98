@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Linkedin, Mail, ArrowUp, Github } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const Footer = () => {
@@ -51,6 +51,14 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white font-semibold">Connect</h4>
             <div className="flex gap-4">
+              <a
+                href={profileData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-[#302f2c] rounded-lg flex items-center justify-center hover:bg-[#d9fb06] group transition-colors duration-300"
+              >
+                <Github className="w-5 h-5 text-[#d9fb06] group-hover:text-[#1a1c1b] transition-colors" />
+              </a>
               <a
                 href={profileData.linkedin}
                 target="_blank"

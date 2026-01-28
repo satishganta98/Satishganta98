@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X, Shield, Github } from 'lucide-react';
+import { profileData } from '../data/mock';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +67,18 @@ const Navbar = () => {
             ))}
           </div>
 
+          {/* GitHub Link */}
+          <a
+            href={profileData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-[#888680] hover:text-[#d9fb06] transition-colors"
+            title="Visit GitHub"
+          >
+            <Github className="w-5 h-5" />
+            <span className="text-sm">GitHub</span>
+          </a>
+
           {/* CTA Button */}
           <a
             href="#contact"
@@ -98,6 +111,14 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href={profileData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-3 text-[#888680] hover:text-[#d9fb06] hover:bg-[#302f2c] rounded-lg transition-all duration-300 font-medium"
+              >
+                GitHub
+              </a>
               <a
                 href="#contact"
                 onClick={(e) => scrollToSection(e, '#contact')}
