@@ -1,0 +1,98 @@
+SATISH KUMAR GANTA
+Dublin, Ireland | +353-876-498-503 | gsk07818@gmail.com
+LinkedIn: linkedin.com/in/satishkumarganta | GitHub: github.com/satishganta98
+
+PROFESSIONAL SUMMARY
+
+Results-driven Cybersecurity Analyst and SOC Officer with 2+ years of experience in Security Operations Center (SOC) activities, threat detection, and incident response. Expertise in SIEM tools, particularly Splunk Enterprise, with strong analytical skills developed through Master's degree in Data Analytics. Proven ability to identify and mitigate security threats, reduce incident response times, and strengthen organizational security posture. Holding 7 industry certifications including CompTIA Security+, CySA+, and Splunk Certified Cybersecurity Defense Analyst.
+
+PROFESSIONAL EXPERIENCE
+
+Response & SOC Officer
+Accenture, Dublin, County Dublin, Ireland
+June 2025 – Present
+
+- Managed immediate responses to security alerts, reducing potential threat impact on Accenture operations by an estimated 15% monthly through timely incident response actions
+- Used Splunk Enterprise for detection logs and analysis, identifying and escalating an average of 10 critical security incidents each week
+- Assessed existing security protocols and integrated new measures to strengthen overall defense, enhancing protection against common cyber threats by 20%
+- Collaborated with internal teams to share incident findings, developing clear technical reports that improved security awareness and response readiness by 10%
+
+Machine Learning and Data Analytics Intern
+Melmaa Tech, Hyderabad, Telangana, India
+July 2022 – January 2023
+
+- Preprocessed large and complex datasets using Pandas and NumPy, improving processing efficiency by 25% for various analytical projects
+- Implemented machine learning models with Scikit-learn for predictive analytics, improving forecast accuracy by 15%
+- Visualized complex data trends using Power BI and Tableau, creating dashboards that helped stakeholders understand key performance metrics
+- Managed and extracted data from SQL (PostgreSQL) databases, ensuring data integrity and efficient retrieval for analytical reporting
+
+EDUCATION
+
+Master's Degree in Data Analytics
+National College of Ireland
+September 2023 – November 2024
+Coursework: Advanced Data Mining, Big Data Analytics, Statistical Modeling, Machine Learning Algorithms, Data Visualization
+
+Bachelor of Technology (BTech) in Computer Science
+Indian Institute Of Industry Interaction Education and Research
+July 2018 – April 2022
+Coursework: Data Structures and Algorithms, Operating Systems, Computer Networks, Database Management Systems, Introduction to Cyber Security
+
+CERTIFICATIONS AND CREDENTIALS
+
+CompTIA Security+ (November 2025)
+CompTIA Network+ (November 2025)
+CompTIA CySA+ Certification (December 2025)
+Splunk Certified Cybersecurity Defense Analyst (December 2025)
+Career Essentials in System Administration - Microsoft & LinkedIn (December 2025)
+CompTIA Security Analytics Professional – CSAP (December 2025)
+SC-300 Identity and Access Administrator - Microsoft (January 2026)
+
+TECHNICAL SKILLS
+
+SIEM & Security Tools
+Splunk Enterprise, SIEM Tools, EDR Tools, Host Forensics, Network Forensics
+
+Cybersecurity Domains
+Threat Detection, Threat Hunting, Incident Response, SOC Operations, Blue Team Operations, Malware Analysis, Log Analysis, Security Audit, Remediation Planning, Cyber Threat Intelligence (CTI)
+
+Cloud Security
+Azure, AWS, Cloud Security Concepts
+
+Programming & Data Analysis
+Python, SQL, Pandas, NumPy, Scikit-learn, NLTK
+
+Data Visualization
+Power BI, Tableau, MS Excel
+
+Automation & Tools
+Docker, Bash, PowerShell, REST API, JSON
+
+TECHNICAL COMPETENCIES
+
+- SIEM Architecture and Log Analysis
+- Incident Response and Threat Detection
+- Security Operations Center (SOC) Management
+- Cloud Security Monitoring
+- Malware and Threat Analysis
+- Network and Host Forensics
+- Security Compliance and Auditing
+- Automated Response Workflows
+- Threat Intelligence Integration
+- Python Scripting for Security Automation
+
+KEY ACHIEVEMENTS
+
+15% Threat Reduction – Reduced potential threat impact on operations monthly through timely incident response
+40+ Weekly Alerts – Identified and escalated an average of 10 critical security incidents each week using Splunk
+20% Security Enhancement – Assessed protocols and integrated new measures to strengthen defense against cyber threats
+10% Awareness Improvement – Developed clear incident reports improving security awareness and response readiness
+500+ Incidents Handled – Managed and responded to 500+ security incidents in SOC environment
+<1 Hour Average Response Time – Maintained rapid incident response and escalation protocols
+
+ADDITIONAL INFORMATION
+
+Languages: English (Fluent)
+Location: Dublin, Ireland
+Availability: Available for full-time opportunities
+
