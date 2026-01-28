@@ -28,11 +28,11 @@ jobs:
 
       - name: Install dependencies
         working-directory: ./frontend
-        run: yarn install --frozen-lockfile
+        run: npm install
 
       - name: Build
         working-directory: ./frontend
-        run: yarn build
+        run: npm run build
         env:
           REACT_APP_BACKEND_URL: ""
 
