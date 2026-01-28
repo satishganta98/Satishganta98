@@ -1,0 +1,26 @@
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Disallow spammy bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://satishganta98.github.io/Satishganta98/sitemap.xml
