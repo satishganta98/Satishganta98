@@ -6,6 +6,7 @@ export const profileData = {
   phone: "+353876498503",
   location: "Dublin, Ireland",
   linkedin: "https://linkedin.com/in/satishkumarganta",
+  github: "https://github.com/satishganta98",
   about: "Results-driven Cybersecurity Professional with expertise in Security Operations Center (SOC) activities, threat detection, and incident response. Currently serving as a SOC Officer at Accenture, I specialize in leveraging SIEM tools like Splunk Enterprise to identify and mitigate security threats. With a Master's degree in Data Analytics and a strong foundation in machine learning, I bring a unique analytical approach to cybersecurity challenges.",
   
   stats: [
