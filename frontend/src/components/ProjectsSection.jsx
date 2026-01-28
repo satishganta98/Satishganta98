@@ -5,7 +5,7 @@ import { profileData } from '../data/mock';
 const ProjectsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'SIEM & Automation', 'Threat Hunting', 'Incident Response', 'Cloud Security', 'Email Security', 'Network Security'];
+  const categories = ['All', 'SIEM & Automation', 'Incident Response', 'Email Security', 'Network Security'];
 
   const categoryIcons = {
     'SIEM & Automation': Code2,
@@ -177,7 +177,7 @@ const ProjectsSection = () => {
             <div className="text-gray-400 text-sm">Technologies Used</div>
           </div>
           <div className="text-center p-6 bg-[#302f2c] rounded-xl border border-[#3d3c38]">
-            <div className="text-3xl font-bold text-[#d9fb06] mb-2">6</div>
+            <div className="text-3xl font-bold text-[#d9fb06] mb-2">4</div>
             <div className="text-gray-400 text-sm">Security Domains</div>
           </div>
         </div>

@@ -181,27 +181,7 @@ export const profileData = {
       status: "Production"
     },
     {
-      id: 4,
-      title: "Cloud Security Monitoring for AWS & Azure",
-      category: "Cloud Security",
-      description: "Developed comprehensive cloud security monitoring solution for multi-cloud environments, tracking misconfigurations, unauthorized access, and compliance violations.",
-      technologies: ["AWS CloudTrail", "Azure Sentinel", "Splunk", "Python", "Terraform"],
-      highlights: [
-        "Monitored 500+ cloud resources across AWS and Azure environments",
-        "Detected and remediated 25+ security misconfigurations",
-        "Implemented automated compliance checking against CIS benchmarks",
-        "Created real-time alerting for suspicious IAM activity"
-      ],
-      metrics: {
-        coverage: "500+ cloud resources",
-        findings: "25+ misconfigurations fixed",
-        compliance: "95% CIS benchmark adherence"
-      },
-      github: "https://github.com/satishganta98",
-      status: "Production"
-    },
-    {
-      id: 5,
+      id: 3,
       title: "Phishing Detection & Response Framework",
       category: "Email Security",
       description: "Built an intelligent phishing detection system using NLP and machine learning to analyze email content, URLs, and attachments for malicious indicators.",
@@ -221,24 +201,24 @@ export const profileData = {
       status: "Production"
     },
     {
-      id: 6,
+      id: 4,
       title: "Network Traffic Analysis & Threat Intelligence Platform",
       category: "Network Security",
-      description: "Developed a network traffic analysis tool that correlates flow data with threat intelligence feeds to identify command-and-control communications and data exfiltration.",
+      description: "Developing a network traffic analysis tool that correlates flow data with threat intelligence feeds to identify command-and-control communications and data exfiltration.",
       technologies: ["Python", "Zeek", "Splunk", "Threat Intelligence APIs", "Docker"],
       highlights: [
-        "Processed 1TB+ of network traffic data daily",
-        "Integrated 5+ threat intelligence feeds (AlienVault, VirusTotal, AbuseIPDB)",
-        "Identified 50+ IOCs matching known malware C2 servers",
-        "Automated blocking of malicious IPs via firewall integration"
+        "Processing network traffic data for behavioral analysis",
+        "Integrating threat intelligence feeds (AlienVault, VirusTotal, AbuseIPDB)",
+        "Building IOC detection and correlation engine",
+        "Developing automated alerting and firewall integration"
       ],
       metrics: {
-        dataVolume: "1TB+ daily traffic",
-        iocs: "50+ malicious indicators found",
-        feeds: "5 threat intel sources"
+        dataVolume: "Traffic analysis in progress",
+        iocs: "Detection engine in development",
+        feeds: "3 threat intel sources integrated"
       },
       github: "https://github.com/satishganta98",
-      status: "Production"
+      status: "In Development"
     }
   ],
 
