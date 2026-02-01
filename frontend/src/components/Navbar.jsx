@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#d9fb06] group-hover:border-[#d9fb06]/80 transition-all duration-300 group-hover:scale-105">
               <img 
-                src="/assets/profile.svg" 
+                src={`${process.env.PUBLIC_URL}/assets/profile.jpg`} 
                 alt="Satish Kumar Ganta"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 20%' }}
