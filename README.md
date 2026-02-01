@@ -1,15 +1,11 @@
-# Emergent
+# Portfolio
 
 A full-stack web application with React frontend and FastAPI backend.
 
 ## Project Structure
 
 ```
-emergent/
-├── .emergent/
-│   ├── frontend/          # React frontend application
-│   ├── emergent.yml       # Project configuration
-│   └── yarn.lock          # Frontend dependencies lock
+portfolio/
 ├── backend/               # FastAPI backend server
 │   ├── server.py          # Main server file
 │   ├── requirements.txt    # Python dependencies
@@ -25,7 +21,7 @@ emergent/
 ### Frontend Setup
 
 ```bash
-cd .emergent/frontend
+cd frontend
 yarn install
 yarn start
 ```
@@ -66,7 +62,7 @@ The workflow:
 
 ## Environment Variables
 
-Create `.env` files in both `backend/` and `.emergent/frontend/` directories with required configuration.
+Create `.env` files in both `backend/` and `frontend/` directories with required configuration.
 
 ## License
 

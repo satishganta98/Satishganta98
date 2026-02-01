@@ -228,41 +228,41 @@ export const profileData = {
       name: "CompTIA Security+",
       issuer: "CompTIA",
       date: "Nov 2025",
-      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/r3es10x3_CompTIA%20Security%2B%20ce%20certificate.pdf",
-      certificateType: "pdf"
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 2,
       name: "CompTIA Network+",
       issuer: "CompTIA",
       date: "Nov 2025",
-      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/88z1jm05_CompTIA%20Network%2B%20ce%20certificate.pdf",
-      badgeUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/7gahacak_Network%2B-jpg.jpg",
-      certificateType: "pdf"
+      certificateUrl: null,
+      badgeUrl: null,
+      certificateType: null
     },
     {
       id: 3,
       name: "CompTIA CySA+ Certification",
       issuer: "CompTIA",
       date: "Dec 2025",
-      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/jvj5iuq8_CompTIA%20CySA%2B%20ce%20certificate.pdf",
-      certificateType: "pdf"
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 4,
       name: "Splunk Certified Cybersecurity Defense Analyst",
       issuer: "Splunk",
       date: "Dec 2025",
-      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/hr3gw0dv_SCCDA%20Cert.png",
-      certificateType: "image"
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 5,
       name: "Career Essentials in System Administration",
       issuer: "Microsoft & LinkedIn",
       date: "Dec 2025",
-      certificateUrl: "https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/lj0j1mc5_IMG_2225.jpeg",
-      certificateType: "image"
+      certificateUrl: null,
+      certificateType: null
     },
     {
       id: 6,

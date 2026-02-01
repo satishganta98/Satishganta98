@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#d9fb06]">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_career-profile-436/artifacts/e3jsphtd_IMG_9529.jpeg" 
+                  src="/assets/profile.svg" 
                   alt="Satish Kumar Ganta"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: '50% 20%' }}
