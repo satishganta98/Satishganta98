@@ -1,101 +1,72 @@
-SATISH KUMAR GANTA
-Dublin, Ireland | +353 876 498 503
-gsk07818@gmail.com | linkedin.com/in/satishkumarganta | github.com/satishganta98
+Satish Kumar Ganta
+Cyber Security
+Satishganta98@gmail.com | www.linkedin.com/in/satish-kumar-ganta | https://satishganta98.github.io/Satishganta98/
+Dublin, Ireland, D24 VY0C, | +353 876498503
 
 ========================================
-PROFESSIONAL SUMMARY
+SUMMARY
 ========================================
 
-Results-driven Cybersecurity Professional with 2+ years of experience in Security Operations Center (SOC) activities, threat detection, and incident response. Currently serving as a SOC Officer at Accenture, specializing in SIEM tools like Splunk Enterprise. Master's degree in Data Analytics combined with strong machine learning foundation enables a data-driven approach to cybersecurity challenges.
+Cybersecurity and SOC Analyst experienced in incident response, SIEM monitoring, and threat analysis in 24/7 enterprise SOC environments. Skilled in Splunk, log analysis, incident escalation, and security reporting to support large-scale client operations. Strong background in network security, threat hunting, and blue team operations with additional skills in data analytics and automation.
 
 ========================================
-KEY ACHIEVEMENTS
+CORE SKILLS
 ========================================
 
-• Reduced potential threat impact on operations by 15% monthly through timely incident response
-• Identified and escalated an average of 40+ security incidents weekly using Splunk Enterprise
-• Enhanced overall security defense by 20% through assessment and integration of new security measures
-• Improved security awareness and response readiness by 10% across teams through detailed incident reporting
-• Handled 500+ security incidents with average response time under 1 hour
+Technical:
+• Splunk Enterprise, SIEM & EDR Tools, Host & Network Forensics, Malware Analysis
+• SOC & Blue Team Operations, Incident Response, Threat Hunting, Log Analysis, Remediation Planning
+• Attacker TTPs & IOCs, Cyber Threat Intelligence (CTI), Cloud Security (Azure/AWS basics)
+• Security Audit, Security Assessment, Data Processing (Pandas/NumPy), SQL, Python
 
-========================================
-PROFESSIONAL EXPERIENCE
-========================================
+Software:
+• Power BI, Tableau, MS Excel, Docker, Scikit-learn, NLTK
 
-RESPONSE & SOC OFFICER
-Accenture, Dublin, Ireland | January 2025 – Present
-
-• Managed immediate responses to security alerts, reducing threat impact by 15% monthly
-• Performed detection and analysis using Splunk Enterprise, identifying ~10 critical incidents weekly
-• Assessed existing security protocols and integrated new defensive measures (20% enhancement)
-• Collaborated with teams to develop incident reports improving security awareness by 10%
-• Maintained incident response SLA of <1 hour average resolution time
-
-MACHINE LEARNING AND DATA ANALYTICS INTERN
-Melmaa Tech, Hyderabad, India | July 2022 – January 2023
-
-• Preprocessed complex datasets using Pandas and NumPy, improving processing efficiency by 25%
-• Implemented machine learning models with Scikit-learn for predictive analytics (15% accuracy improvement)
-• Created data visualizations in Power BI and Tableau (20% stakeholder understanding improvement)
-• Managed PostgreSQL databases ensuring data integrity for analytical reporting
-
-========================================
-TECHNICAL SKILLS
-========================================
-
-Security Tools:
-• Splunk Enterprise (SIEM), EDR Tools, Packet Analysis, Log Analysis
-• Host & Network Forensics, Malware Analysis, Threat Intelligence (CTI)
-
-Cloud & Infrastructure:
-• Azure Cloud Security, AWS Security, Docker, Incident Response Planning
-
-Data & Analytics:
-• Python, SQL (PostgreSQL), Power BI, Tableau, Machine Learning (Scikit-learn)
-• Data Processing: Pandas, NumPy, Natural Language Processing (NLTK)
-
-Soft Skills:
-• Problem-Solving, Technical Report Writing, Executive Reporting, Team Collaboration
+Professional:
+• Problem-Solving, Communication, Technical/Executive Report Writing, Client Interface, Team Collaboration
 
 ========================================
 EDUCATION
 ========================================
 
-Master's Degree in Data Analytics
-National College of Ireland, Dublin | September 2023 – November 2024
-• Coursework: Advanced Data Mining, Big Data Analytics, Statistical Modeling, Machine Learning
+Master's in Data Analytics
+National College of Ireland | September 2023 - November 2024
+GPA: 68%
 
-Bachelor of Technology (BTech) in Computer Science
-Indian Institute Of Industry Interaction Education and Research | July 2018 – April 2022
-• Coursework: Data Structures, Operating Systems, Computer Networks, Cyber Security
-
-========================================
-PROFESSIONAL CERTIFICATIONS (7)
-========================================
-
-✓ CompTIA Security+ (November 2025)
-✓ CompTIA Network+ (November 2025)
-✓ CompTIA CySA+ Certification (December 2025)
-✓ Splunk Certified Cybersecurity Defense Analyst (December 2025)
-✓ Career Essentials in System Administration - Microsoft & LinkedIn (December 2025)
-✓ CompTIA Security Analytics Professional – CSAP (December 2025)
-✓ SC-300 Identity and Access Administrator - Microsoft (January 2026)
+Bachelor in Computer Science
+Indian Institute of Industry Interaction Education and Research, India | July 2018 - April 2022
+GPA: 70%
 
 ========================================
-LANGUAGES
+WORK EXPERIENCE
 ========================================
 
-• English (Fluent)
-• Hindi (Native)
-• Telugu (Native)
+Response & SOC Officer
+CIS Security Ltd - Accenture | Dublin, Ireland | June 2025 - Present
+
+• Managed immediate responses to security alerts, reducing potential threat impact on Accenture operations by an estimated 15% monthly through timely actions
+• Used Splunk Enterprise for detection logs and analysis, identifying and escalating an average of 10 critical security incidents each week
+• Assessed existing security protocols and integrated new measures to strengthen overall defence, enhancing protection against common cyber threats by 20%
+• Collaborated with internal teams to share incident findings, developing clear reports that helped improve security awareness and response readiness by 10%
+
+Machine Learning and Data Analytics Intern
+Melmaa Tech | Hyderabad, India | July 2022 - January 2023
+
+• Preprocessed large and complex datasets using Pandas and NumPy, preparing data for analysis and improving processing efficiency by 25% for various projects
+• Implemented machine learning models with Scikit-learn for predictive analytics, providing insights that supported business decisions and improved forecast accuracy by 15%
+• Visualized complex data trends using Power BI and Tableau, creating clear dashboards that helped stakeholders understand key performance metrics by 20%
+• Managed and extracted data from SQL (PostgreSQL) databases, ensuring data integrity and efficient retrieval for analytical reporting purposes in projects
 
 ========================================
-ADDITIONAL INFORMATION
+CERTIFICATES
 ========================================
 
-• Available for immediate start
-• Open to opportunities in SOC, Security Engineering, and Threat Hunting roles
-• Active participant in cybersecurity community
-• Continuous learner with focus on emerging security threats
+✓ CompTIA Security+ - CompTIA (November 2025)
+✓ CompTIA Network+ - CompTIA (November 2025)
+✓ CompTIA CySA+ Certification - CompTIA (December 2025)
+✓ Splunk Certified Cybersecurity Defence Analyst - Splunk (December 2025)
+✓ Career Essentials in System Administration by Microsoft and LinkedIn - Microsoft (November 2025)
+✓ CompTIA Security Analytics Professional – CSAP Stackable Certification - CompTIA (December 2025)
+✓ SC-300 - Microsoft (January 2026)
 
 ========================================
