@@ -140,12 +140,12 @@ const CertificationsSection = () => {
                 )}
               </div>
 
-              <div className="mb-2 min-h-[72px] flex items-center">
+              <div className="mb-2 min-h-[80px] flex items-center">
                 {cert.badgeLogo && !logoLoadError[`badge-${cert.id}`] ? (
                   <img
                     src={cert.badgeLogo}
                     alt={`${cert.name} badge`}
-                    className="h-16 md:h-[72px] w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+                    className="h-[72px] md:h-[88px] w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
                     onError={() =>
                       setLogoLoadError((prev) => ({
                         ...prev,
@@ -157,7 +157,7 @@ const CertificationsSection = () => {
                   <img
                     src={ISSUER_LOGO_MAP[cert.issuer]}
                     alt={`${cert.issuer} logo`}
-                    className="h-14 md:h-16 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                    className="h-16 md:h-[72px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                     onError={() =>
                       setLogoLoadError((prev) => ({
                         ...prev,
