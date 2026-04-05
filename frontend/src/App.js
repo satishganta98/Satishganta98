@@ -18,13 +18,13 @@ const Footer = lazy(() => import("./components/Footer"));
 
 const SectionLoader = () => (
   <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-    <div className="h-24 rounded-xl bg-[#302f2c] border border-[#3f4816]/50 animate-pulse" />
+    <div className="h-24 rounded-xl bg-[#f3f4f6] border border-[#d1d5db]/50 animate-pulse" />
   </div>
 );
 
 function App() {
   return (
-    <div className="App bg-[#1a1c1b] min-h-screen">
+    <div className="App bg-[#f8f9fa] min-h-screen">
       <Navbar />
       <main>
         <HeroSection />
