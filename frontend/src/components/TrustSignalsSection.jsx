@@ -3,35 +3,40 @@ import React from 'react';
 const trustSignals = [
   {
     name: 'Accenture',
-    logo: 'https://logo.clearbit.com/accenture.com',
+    logo: 'https://cdn.simpleicons.org/accenture/A100FF',
+    fallbackLogo: 'https://cdn.simpleicons.org/accenture/6B7280',
     url: 'https://www.accenture.com',
     tint: 'from-[#A100FF]/15 to-[#7E22CE]/5',
     border: 'border-[#A100FF]/30',
   },
   {
     name: 'CIS Security',
-    logo: 'https://logo.clearbit.com/cis-security.co.uk',
+    logo: null,
+    fallbackLogo: null,
     url: 'https://www.cis-security.co.uk',
     tint: 'from-[#0EA5E9]/15 to-[#0284C7]/5',
     border: 'border-[#0EA5E9]/30',
   },
   {
     name: 'CompTIA',
-    logo: 'https://logo.clearbit.com/comptia.org',
+    logo: 'https://cdn.simpleicons.org/comptia/D71920',
+    fallbackLogo: 'https://cdn.simpleicons.org/comptia/6B7280',
     url: 'https://www.comptia.org',
     tint: 'from-[#D71920]/15 to-[#B91C1C]/5',
     border: 'border-[#D71920]/30',
   },
   {
     name: 'Splunk',
-    logo: 'https://logo.clearbit.com/splunk.com',
+    logo: 'https://cdn.simpleicons.org/splunk/65A637',
+    fallbackLogo: 'https://cdn.simpleicons.org/splunk/6B7280',
     url: 'https://www.splunk.com',
     tint: 'from-[#65A637]/20 to-[#4D7C0F]/5',
     border: 'border-[#65A637]/35',
   },
   {
     name: 'Microsoft',
-    logo: 'https://logo.clearbit.com/microsoft.com',
+    logo: 'https://cdn.simpleicons.org/microsoft/F25022',
+    fallbackLogo: 'https://cdn.simpleicons.org/microsoft/6B7280',
     url: 'https://www.microsoft.com',
     tint: 'from-[#2563EB]/15 to-[#16A34A]/5',
     border: 'border-[#2563EB]/30',
@@ -59,15 +64,25 @@ const TrustSignalsSection = () => {
               aria-label={brand.name}
               title={brand.name}
             >
-              <div className="h-16 w-16 md:h-20 md:w-20 rounded-2xl bg-white/90 border border-white shadow-md flex items-center justify-center p-3">
-                <img
-                  src={brand.logo}
-                  alt={`${brand.name} logo`}
-                  className="h-10 w-10 md:h-12 md:w-12 object-contain"
-                  loading="lazy"
-                  decoding="async"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="h-16 w-16 md:h-20 md:w-20 rounded-2xl bg-white/95 border border-white shadow-md flex items-center justify-center p-3">
+                {brand.logo ? (
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="h-10 w-10 md:h-12 md:w-12 object-contain"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      if (brand.fallbackLogo && e.currentTarget.src !== brand.fallbackLogo) {
+                        e.currentTarget.src = brand.fallbackLogo;
+                      }
+                    }}
+                  />
+                ) : (
+                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-[#0284C7]/10 border border-[#0284C7]/30 flex items-center justify-center text-[#0284C7] font-extrabold text-sm">
+                    CIS
+                  </div>
+                )}
               </div>
               <span className="text-[#111827] text-sm font-bold text-center leading-tight">{brand.name}</span>
             </a>
