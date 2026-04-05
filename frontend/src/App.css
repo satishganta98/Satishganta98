@@ -1,5 +1,14 @@
 /* Portfolio Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --cyber-bg: #0b1020;
+  --cyber-surface: #121a2b;
+  --cyber-border: #1f2a44;
+  --cyber-accent: #22d3ee;
+  --cyber-accent-strong: #06b6d4;
+  --cyber-text-muted: #94a3b8;
+}
 
 * {
   scroll-behavior: smooth;
@@ -9,7 +18,40 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(1200px 700px at 10% -10%, rgba(34, 211, 238, 0.08), transparent 60%),
+              radial-gradient(900px 500px at 100% 0%, rgba(16, 185, 129, 0.06), transparent 60%),
+              var(--cyber-bg);
+  color: #e5e7eb;
 }
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Cyber palette remap for existing utility classes */
+[class*="bg-[#1a1c1b]"] { background-color: var(--cyber-bg) !important; }
+[class*="bg-[#302f2c]"] { background-color: var(--cyber-surface) !important; }
+[class*="bg-[#3f4816]"] { background-color: var(--cyber-border) !important; }
+[class*="text-[#d9fb06]"] { color: var(--cyber-accent) !important; }
+[class*="text-[#888680]"] { color: var(--cyber-text-muted) !important; }
+[class*="border-[#3f4816]"] { border-color: var(--cyber-border) !important; }
+[class*="border-[#3f4816]/"] { border-color: rgba(31, 42, 68, 0.65) !important; }
+[class*="from-[#3f4816]"] { --tw-gradient-from: rgba(31, 42, 68, 1) var(--tw-gradient-from-position) !important; }
+[class*="to-[#302f2c]"] { --tw-gradient-to: rgba(18, 26, 43, 1) var(--tw-gradient-to-position) !important; }
+
+/* Hover remap */
+[class*="hover:text-[#d9fb06]"]:hover { color: var(--cyber-accent) !important; }
+[class*="hover:bg-[#d9fb06]"]:hover { background-color: var(--cyber-accent) !important; }
+[class*="hover:border-[#d9fb06]"]:hover { border-color: var(--cyber-accent) !important; }
+[class*="group-hover:text-[#d9fb06]"] { transition: color .25s ease; }
+.group:hover [class*="group-hover:text-[#d9fb06]"] { color: var(--cyber-accent) !important; }
+[class*="group-hover:bg-[#d9fb06]"] { transition: background-color .25s ease; }
+.group:hover [class*="group-hover:bg-[#d9fb06]"] { background-color: var(--cyber-accent) !important; }
+
+/* Improve contrast where accent background is used with old dark text token */
+[class*="bg-[#d9fb06]"] { background-color: var(--cyber-accent) !important; }
+[class*="text-[#1a1c1b]"] { color: #03131a !important; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -17,21 +59,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1c1b;
+  background: var(--cyber-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f4816;
+  background: var(--cyber-border);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d9fb06;
+  background: var(--cyber-accent);
 }
 
 /* Selection color */
 ::selection {
-  background: #d9fb06;
-  color: #1a1c1b;
+  background: var(--cyber-accent);
+  color: #03131a;
 }
 
