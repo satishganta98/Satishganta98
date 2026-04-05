@@ -26,6 +26,12 @@ export const profileData = {
 
   achievements: [
     {
+      title: "Ireland OSPAs 2026 Finalist",
+      description: "Honored to be named Finalist for Outstanding Young Security Professional. This recognition reflects high-impact SOC operations, real-time incident handling, and sustained growth under strong mentorship at CIS Security Limited.",
+      linkUrl: "https://lnkd.in/exSGpTD5",
+      linkLabel: "View announcement"
+    },
+    {
       title: "15% Threat Reduction",
       description: "Reduced potential threat impact on operations monthly through timely incident response actions."
     },

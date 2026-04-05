@@ -37,6 +37,16 @@ const AchievementsSection = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white">{achievement.title}</h3>
                     <p className="text-[#888680] mt-2 leading-relaxed">{achievement.description}</p>
+                    {achievement.linkUrl && (
+                      <a
+                        href={achievement.linkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center mt-3 text-sm font-semibold text-[#d9fb06] hover:opacity-80 transition-opacity"
+                      >
+                        {achievement.linkLabel || 'View details'}
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
