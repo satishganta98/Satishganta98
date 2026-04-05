@@ -10,6 +10,8 @@ const ExperienceSection = lazy(() => import("./components/ExperienceSection"));
 const EducationSection = lazy(() => import("./components/EducationSection"));
 const ProjectsSection = lazy(() => import("./components/ProjectsSection"));
 const ImpactSection = lazy(() => import("./components/ImpactSection"));
+const SOCDashboardSection = lazy(() => import("./components/SOCDashboardSection"));
+const TrustSignalsSection = lazy(() => import("./components/TrustSignalsSection"));
 const CertificationsSection = lazy(() => import("./components/CertificationsSection"));
 const ContactSection = lazy(() => import("./components/ContactSection"));
 const Footer = lazy(() => import("./components/Footer"));
@@ -34,6 +36,8 @@ function App() {
           <EducationSection />
           <ProjectsSection />
           <ImpactSection />
+          <SOCDashboardSection />
+          <TrustSignalsSection />
           <CertificationsSection />
           <ContactSection />
         </Suspense>

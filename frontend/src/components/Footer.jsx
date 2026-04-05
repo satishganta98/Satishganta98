@@ -39,10 +39,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white font-semibold">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
-              {['About', 'Achievements', 'Skills', 'Experience', 'Education', 'Projects', 'Impact', 'Certifications', 'Contact'].map((link) => (
+              {['About', 'Achievements', 'Skills', 'Experience', 'Education', 'Projects', 'Impact', 'SOC Dashboard', 'Trust Signals', 'Certifications', 'Contact'].map((link) => (
                 <a
                   key={link}
-                  href={`#${link.toLowerCase()}`}
+                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
                   className="text-[#888680] hover:text-[#d9fb06] transition-colors"
                 >
                   {link}

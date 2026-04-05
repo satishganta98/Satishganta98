@@ -53,6 +53,14 @@ export const profileData = {
 
   impactMetrics: [
     {
+      id: "mttd-improvement",
+      label: "MTTD improvement",
+      value: "25%",
+      delta: "Detection faster",
+      description: "Improved mean time to detect through tuned correlation and triage workflows.",
+      trend: [100, 97, 93, 89, 84, 79, 75]
+    },
+    {
       id: "alerts-triaged",
       label: "Critical alerts triaged / week",
       value: "40+",
