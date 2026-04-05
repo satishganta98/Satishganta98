@@ -35,6 +35,7 @@ jobs:
         run: npm run build
         env:
           REACT_APP_BACKEND_URL: ""
+          REACT_APP_SITE_URL: "/Satishganta98"
           PUBLIC_URL: "/Satishganta98"
 
       - name: Setup Pages

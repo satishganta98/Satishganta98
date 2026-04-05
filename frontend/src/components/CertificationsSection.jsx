@@ -11,6 +11,13 @@ import {
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
 const HAS_BACKEND = Boolean(BACKEND_URL);
 
+const ISSUER_LOGO_MAP = {
+  "CompTIA": "https://cdn.simpleicons.org/comptia/d9fb06",
+  "Splunk": "https://cdn.simpleicons.org/splunk/d9fb06",
+  "Microsoft": "https://cdn.simpleicons.org/microsoft/d9fb06",
+  "Microsoft & LinkedIn": "https://cdn.simpleicons.org/microsoft/d9fb06",
+};
+
 // Map cert id → expected filename (must match backend ALLOWED_CERT_FILENAMES)
 const CERT_FILENAME_MAP = {
   1: "comptia-security-plus.pdf",
@@ -25,6 +32,7 @@ const CERT_FILENAME_MAP = {
 const CertificationsSection = () => {
   const [selectedCert, setSelectedCert] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [logoLoadError, setLogoLoadError] = useState({});
 
   // Upload state
   const [uploadingId, setUploadingId] = useState(null);
@@ -132,9 +140,37 @@ const CertificationsSection = () => {
                 )}
               </div>
 
-              <h3 className="text-white font-semibold mb-2 group-hover:text-[#d9fb06] transition-colors">
-                {cert.name}
-              </h3>
+              <div className="mb-2 min-h-[28px] flex items-center">
+                {cert.badgeLogo && !logoLoadError[`badge-${cert.id}`] ? (
+                  <img
+                    src={cert.badgeLogo}
+                    alt={`${cert.name} badge`}
+                    className="h-7 w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+                    onError={() =>
+                      setLogoLoadError((prev) => ({
+                        ...prev,
+                        [`badge-${cert.id}`]: true,
+                      }))
+                    }
+                  />
+                ) : ISSUER_LOGO_MAP[cert.issuer] && !logoLoadError[`issuer-${cert.id}`] ? (
+                  <img
+                    src={ISSUER_LOGO_MAP[cert.issuer]}
+                    alt={`${cert.issuer} logo`}
+                    className="h-7 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                    onError={() =>
+                      setLogoLoadError((prev) => ({
+                        ...prev,
+                        [`issuer-${cert.id}`]: true,
+                      }))
+                    }
+                  />
+                ) : (
+                  <h3 className="text-white font-semibold group-hover:text-[#d9fb06] transition-colors">
+                    {cert.name}
+                  </h3>
+                )}
+              </div>
 
               <p className="text-[#d9fb06] text-sm font-medium mb-3">
                 {cert.issuer}

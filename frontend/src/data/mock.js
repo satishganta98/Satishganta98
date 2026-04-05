@@ -1,4 +1,5 @@
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+// For GitHub Pages, use the correct base path
 const STATIC_BASE = "/Satishganta98";
 const certificatePath = (fileName) =>
   BACKEND_URL
@@ -236,6 +237,7 @@ export const profileData = {
       issuer: "CompTIA",
       date: "Nov 2025",
       certificateUrl: certificatePath("comptia-security-plus.pdf"),
+      badgeLogo: "https://images.credly.com/size/680x680/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
       certificateType: "pdf"
     },
     {
@@ -244,7 +246,7 @@ export const profileData = {
       issuer: "CompTIA",
       date: "Nov 2025",
       certificateUrl: certificatePath("comptia-network-plus.pdf"),
-      badgeUrl: null,
+      badgeLogo: "https://images.credly.com/size/680x680/images/c70ba73e-3c8a-46fa-9d60-4a9af94ad662/blob",
       certificateType: "pdf"
     },
     {
@@ -253,6 +255,7 @@ export const profileData = {
       issuer: "CompTIA",
       date: "Dec 2025",
       certificateUrl: certificatePath("comptia-cysa-plus.pdf"),
+      badgeLogo: "https://images.credly.com/size/680x680/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob",
       certificateType: "pdf"
     },
     {
@@ -261,6 +264,7 @@ export const profileData = {
       issuer: "Splunk",
       date: "Dec 2025",
       certificateUrl: certificatePath("splunk-cybersecurity-defense-analyst.pdf"),
+      badgeLogo: "https://images.credly.com/size/680x680/images/facb40b2-23dc-43c5-a7a1-33087a40b614/image.png",
       certificateType: "pdf"
     },
     {
@@ -269,6 +273,7 @@ export const profileData = {
       issuer: "Microsoft & LinkedIn",
       date: "Dec 2025",
       certificateUrl: certificatePath("career-essentials-system-administration.pdf"),
+      badgeLogo: null,
       certificateType: "pdf"
     },
     {
@@ -277,6 +282,7 @@ export const profileData = {
       issuer: "CompTIA",
       date: "Dec 2025",
       certificateUrl: null,
+      badgeLogo: "https://images.credly.com/size/680x680/images/ba1b8072-8ebe-432c-88e5-05bc809c624a/CompTIA_CSAP.png",
       certificateType: "pdf"
     },
     {
@@ -285,6 +291,7 @@ export const profileData = {
       issuer: "Microsoft",
       date: "Jan 2026",
       certificateUrl: null,
+      badgeLogo: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
       certificateType: "pdf"
     }
   ]

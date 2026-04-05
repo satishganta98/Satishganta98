@@ -3,6 +3,8 @@ import { MapPin, Mail, ArrowDown, Shield, Terminal, Download, TrendingUp, Linked
 import { profileData } from '../data/mock';
 
 const HeroSection = () => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {
@@ -74,7 +76,7 @@ const HeroSection = () => {
               
               {/* CV Download Buttons */}
               <a
-                href="/Satishganta98/cv.pdf"
+                href={`${publicUrl}/cv.pdf`}
                 download="Satish_Kumar_Ganta_CV.pdf"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-[#d9fb06] text-[#d9fb06] rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#d9fb06] hover:text-[#1a1c1b] transition-all duration-300"
               >
@@ -83,7 +85,7 @@ const HeroSection = () => {
               </a>
 
               <a
-                href="/Satishganta98/cv-ats.txt"
+                href={`${publicUrl}/cv-ats.txt`}
                 download="Satish_Kumar_Ganta_CV_ATS.txt"
                 className="inline-flex items-center gap-2 px-6 py-4 border border-[#888680] text-[#888680] rounded-full font-bold text-sm uppercase tracking-wider hover:border-[#d9fb06] hover:text-[#d9fb06] transition-all duration-300"
                 title="ATS-formatted CV for job applications"
