@@ -1,8 +1,9 @@
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const STATIC_BASE = "/Satishganta98";
 const certificatePath = (fileName) =>
   BACKEND_URL
     ? `${BACKEND_URL}/certificates/${fileName}`
-    : `${process.env.PUBLIC_URL || ""}/certificates/${fileName}`;
+    : `${STATIC_BASE}/certificates/${fileName}`;
 
 export const profileData = {
   name: "Satish Kumar Ganta",
@@ -275,7 +276,7 @@ export const profileData = {
       name: "CompTIA Security Analytics Professional – CSAP",
       issuer: "CompTIA",
       date: "Dec 2025",
-      certificateUrl: certificatePath("comptia-csap.pdf"),
+      certificateUrl: null,
       certificateType: "pdf"
     },
     {
@@ -283,7 +284,7 @@ export const profileData = {
       name: "SC-300 Identity and Access Administrator",
       issuer: "Microsoft",
       date: "Jan 2026",
-      certificateUrl: certificatePath("microsoft-sc-300.pdf"),
+      certificateUrl: null,
       certificateType: "pdf"
     }
   ]
