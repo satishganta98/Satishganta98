@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Trophy, TrendingUp, ShieldCheck, Gauge } from 'lucide-react';
 import { profileData } from '../data/mock';
 
 const ICONS = [TrendingUp, ShieldCheck, Gauge, Trophy];
 
 const AchievementsSection = () => {
+  const [imageLoadError, setImageLoadError] = useState({});
+
   return (
     <section id="achievements" className="py-24 bg-[#1a1c1b]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -30,6 +32,22 @@ const AchievementsSection = () => {
                 key={achievement.title}
                 className="p-6 bg-[#302f2c] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300 hover:-translate-y-1"
               >
+                {achievement.image && !imageLoadError[achievement.title] && (
+                  <img
+                    src={achievement.image}
+                    alt={achievement.imageAlt || achievement.title}
+                    className="w-full h-48 object-cover rounded-lg border border-[#3f4816]/60 mb-5"
+                    loading="lazy"
+                    decoding="async"
+                    onError={() =>
+                      setImageLoadError((prev) => ({
+                        ...prev,
+                        [achievement.title]: true,
+                      }))
+                    }
+                  />
+                )}
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#3f4816] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-6 h-6 text-[#d9fb06]" />

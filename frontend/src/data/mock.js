@@ -28,6 +28,8 @@ export const profileData = {
     {
       title: "Ireland OSPAs 2026 Finalist",
       description: "Honored to be named Finalist for Outstanding Young Security Professional. This recognition reflects high-impact SOC operations, real-time incident handling, and sustained growth under strong mentorship at CIS Security Limited.",
+      image: `${STATIC_BASE}/assets/achievements/ospas-2026.jpg`,
+      imageAlt: "Ireland OSPAs 2026 Outstanding Young Security Professional finalist announcement",
       linkUrl: "https://lnkd.in/exSGpTD5",
       linkLabel: "View announcement"
     },
