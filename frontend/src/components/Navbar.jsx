@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Impact', href: '#impact' },
     { name: 'Certificates', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -48,6 +49,10 @@ const Navbar = () => {
                 src={`${process.env.PUBLIC_URL}/assets/profile.jpg`} 
                 alt="Satish Kumar Ganta"
                 className="w-full h-full object-cover"
+                width="40"
+                height="40"
+                fetchPriority="high"
+                decoding="async"
                 style={{ objectPosition: '50% 20%' }}
               />
             </div>

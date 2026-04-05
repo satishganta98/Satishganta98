@@ -43,6 +43,41 @@ export const profileData = {
     }
   ],
 
+  impactMetrics: [
+    {
+      id: "alerts-triaged",
+      label: "Critical alerts triaged / week",
+      value: "40+",
+      delta: "15% faster",
+      description: "Prioritized and escalated high-risk detections using Splunk workflows.",
+      trend: [22, 24, 26, 28, 30, 33, 35, 38, 40]
+    },
+    {
+      id: "false-positive-reduction",
+      label: "False-positive reduction",
+      value: "35%",
+      delta: "Noise down",
+      description: "Improved alert quality through rule tuning and correlation logic.",
+      trend: [100, 95, 90, 84, 79, 74, 70, 67, 65]
+    },
+    {
+      id: "mttr-improvement",
+      label: "MTTR improvement",
+      value: "40%",
+      delta: "Response faster",
+      description: "Reduced mean time to respond with automated incident playbooks.",
+      trend: [100, 96, 92, 88, 82, 76, 70, 64, 60]
+    },
+    {
+      id: "incidents-handled",
+      label: "Security incidents handled",
+      value: "500+",
+      delta: "2+ years",
+      description: "Sustained SOC operations with clear triage, response, and reporting.",
+      trend: [120, 180, 230, 280, 330, 380, 430, 470, 500]
+    }
+  ],
+
   skills: {
     technical: [
       "Splunk Enterprise",

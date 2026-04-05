@@ -146,6 +146,8 @@ const CertificationsSection = () => {
                     src={cert.badgeLogo}
                     alt={`${cert.name} badge`}
                     className="h-[72px] md:h-[88px] w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                    decoding="async"
                     onError={() =>
                       setLogoLoadError((prev) => ({
                         ...prev,
@@ -158,6 +160,8 @@ const CertificationsSection = () => {
                     src={ISSUER_LOGO_MAP[cert.issuer]}
                     alt={`${cert.issuer} logo`}
                     className="h-16 md:h-[72px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                    decoding="async"
                     onError={() =>
                       setLogoLoadError((prev) => ({
                         ...prev,
@@ -285,6 +289,8 @@ const CertificationsSection = () => {
                 src={selectedCert.certificateUrl}
                 alt={`${selectedCert.name} Certificate`}
                 className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             ) : selectedCert?.certificateType === 'pdf' ? (
               <div className="w-full">

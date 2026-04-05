@@ -21,6 +21,10 @@ const Footer = () => {
                   src={`${process.env.PUBLIC_URL}/assets/profile.jpg`} 
                   alt="Satish Kumar Ganta"
                   className="w-full h-full object-cover"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
                   style={{ objectPosition: '50% 20%' }}
                 />
               </div>
@@ -35,7 +39,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white font-semibold">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
-              {['About', 'Skills', 'Experience', 'Education', 'Certifications', 'Contact'].map((link) => (
+              {['About', 'Skills', 'Experience', 'Education', 'Projects', 'Impact', 'Certifications', 'Contact'].map((link) => (
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
