@@ -2,6 +2,18 @@ import React, { useState } from 'react';
 import { Github, ExternalLink, Code2, Shield, Activity, Cloud, Mail, Network } from 'lucide-react';
 import { profileData } from '../data/mock';
 
+const techBrandMeta = {
+  'Splunk Enterprise': { logo: 'https://cdn.simpleicons.org/splunk/65A637', bg: 'bg-[#65A637]/10', text: 'text-[#3f7f2b]', border: 'border-[#65A637]/35' },
+  'Splunk': { logo: 'https://cdn.simpleicons.org/splunk/65A637', bg: 'bg-[#65A637]/10', text: 'text-[#3f7f2b]', border: 'border-[#65A637]/35' },
+  'Python': { logo: 'https://cdn.simpleicons.org/python/3776AB', bg: 'bg-[#3776AB]/10', text: 'text-[#285e8c]', border: 'border-[#3776AB]/35' },
+  'Power BI': { logo: 'https://cdn.simpleicons.org/powerbi/F2C811', bg: 'bg-[#F2C811]/15', text: 'text-[#8d7300]', border: 'border-[#F2C811]/40' },
+  'Tableau': { logo: 'https://cdn.simpleicons.org/tableau/E97627', bg: 'bg-[#E97627]/10', text: 'text-[#a85117]', border: 'border-[#E97627]/35' },
+  'Scikit-learn': { logo: 'https://cdn.simpleicons.org/scikitlearn/F7931E', bg: 'bg-[#F7931E]/10', text: 'text-[#a75b07]', border: 'border-[#F7931E]/35' },
+  'Pandas': { logo: 'https://cdn.simpleicons.org/pandas/150458', bg: 'bg-[#150458]/10', text: 'text-[#2b1b77]', border: 'border-[#150458]/35' },
+  'Docker': { logo: 'https://cdn.simpleicons.org/docker/2496ED', bg: 'bg-[#2496ED]/10', text: 'text-[#1f6db3]', border: 'border-[#2496ED]/35' },
+  'NLTK': { logo: 'https://cdn.simpleicons.org/python/3776AB', bg: 'bg-[#3776AB]/10', text: 'text-[#285e8c]', border: 'border-[#3776AB]/35' }
+};
+
 const ProjectsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -98,13 +110,25 @@ const ProjectsSection = () => {
                 {project.technologies.slice(0, 4).map((tech, index) => (
                   <span
                     key={index}
-                    className="text-xs px-3 py-1 bg-[#ffffff] text-[#9ca3af] rounded-full"
+                    className={`text-xs px-3 py-1.5 rounded-full border inline-flex items-center gap-1.5 font-medium ${
+                      techBrandMeta[tech]
+                        ? `${techBrandMeta[tech].bg} ${techBrandMeta[tech].text} ${techBrandMeta[tech].border}`
+                        : 'bg-[#dbeafe]/60 text-[#1f40af] border-[#93c5fd]/40'
+                    }`}
                   >
+                    {techBrandMeta[tech]?.logo && (
+                      <img
+                        src={techBrandMeta[tech].logo}
+                        alt={`${tech} logo`}
+                        className="w-3.5 h-3.5 object-contain"
+                        loading="lazy"
+                      />
+                    )}
                     {tech}
                   </span>
                 ))}
                 {project.technologies.length > 4 && (
-                  <span className="text-xs px-3 py-1 bg-[#ffffff] text-[#6b7280] rounded-full">
+                  <span className="text-xs px-3 py-1.5 bg-white border border-[#d1d5db] text-[#6b7280] rounded-full">
                     +{project.technologies.length - 4} more
                   </span>
                 )}
