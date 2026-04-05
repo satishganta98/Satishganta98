@@ -4,13 +4,13 @@ import { profileData } from '../data/mock';
 
 const EducationSection = () => {
   return (
-    <section id="education" className="py-24 bg-[#302f2c]">
+    <section id="education" className="py-24 bg-[#f3f4f6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Academic Background</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
-            Education & <span className="text-[#888680]">Learning</span>
+          <span className="text-[#3b82f6] text-sm font-semibold uppercase tracking-widest">Academic Background</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] mt-4">
+            Education & <span className="text-[#4b5563]">Learning</span>
           </h2>
         </div>
 
@@ -19,34 +19,34 @@ const EducationSection = () => {
           {profileData.education.map((edu) => (
             <div
               key={edu.id}
-              className="group p-8 bg-[#1a1c1b] rounded-2xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300"
+              className="group p-8 bg-[#ffffff] rounded-2xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-all duration-300"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-[#3f4816] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#d9fb06] transition-colors duration-300">
-                <GraduationCap className="w-7 h-7 text-[#d9fb06] group-hover:text-[#1a1c1b] transition-colors duration-300" />
+              <div className="w-14 h-14 bg-[#d1d5db] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3b82f6] transition-colors duration-300">
+                <GraduationCap className="w-7 h-7 text-[#3b82f6] group-hover:text-white transition-colors duration-300" />
               </div>
 
               {/* Degree */}
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#d9fb06] transition-colors">
+              <h3 className="text-xl font-bold text-[#111827] mb-2 group-hover:text-[#3b82f6] transition-colors">
                 {edu.degree}
               </h3>
 
               {/* Institution */}
-              <p className="text-[#d9fb06] font-semibold mb-4">{edu.institution}</p>
+              <p className="text-[#3b82f6] font-semibold mb-4">{edu.institution}</p>
 
               {/* Duration */}
-              <div className="flex items-center gap-2 text-[#888680] mb-6">
+              <div className="flex items-center gap-2 text-[#4b5563] mb-6">
                 <Calendar className="w-4 h-4" />
                 <span>{edu.duration}</span>
               </div>
 
               {/* Coursework */}
-              <div className="pt-6 border-t border-[#3f4816]">
-                <div className="flex items-center gap-2 text-[#888680] text-sm mb-3">
-                  <BookOpen className="w-4 h-4 text-[#d9fb06]" />
+              <div className="pt-6 border-t border-[#d1d5db]">
+                <div className="flex items-center gap-2 text-[#4b5563] text-sm mb-3">
+                  <BookOpen className="w-4 h-4 text-[#3b82f6]" />
                   <span className="font-semibold uppercase tracking-wider">Relevant Coursework</span>
                 </div>
-                <p className="text-[#888680] text-sm leading-relaxed">
+                <p className="text-[#4b5563] text-sm leading-relaxed">
                   {edu.coursework}
                 </p>
               </div>

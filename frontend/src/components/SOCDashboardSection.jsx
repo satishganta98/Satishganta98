@@ -70,17 +70,17 @@ const SOCDashboardSection = () => {
   );
 
   return (
-    <section id="soc-dashboard" className="py-24 bg-[#171918]">
+    <section id="soc-dashboard" className="py-24 bg-[#f3f4f6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Live SOC Dashboard</span>
-            <span className="px-3 py-1 bg-[#d9fb06] text-[#1a1c1b] text-xs font-bold rounded-full">Real Metrics</span>
+            <span className="text-[#3b82f6] text-sm font-semibold uppercase tracking-widest">Live SOC Dashboard</span>
+            <span className="px-3 py-1 bg-[#3b82f6] text-white text-xs font-bold rounded-full">Real Metrics</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
-            Operational <span className="text-[#888680]">KPI Monitor</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] mt-4">
+            Operational <span className="text-[#4b5563]">KPI Monitor</span>
           </h2>
-          <p className="text-[#888680] mt-4 max-w-3xl">
+          <p className="text-[#4b5563] mt-4 max-w-3xl">
             Core SOC performance indicators powered by the same impact data used across this portfolio.
           </p>
         </div>
@@ -99,24 +99,24 @@ const SOCDashboardSection = () => {
             return (
               <article
                 key={item.metricId}
-                className="p-6 bg-[#302f2c] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-colors"
+                className="p-6 bg-[#ffffff] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-colors"
               >
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-11 h-11 bg-[#3f4816] rounded-lg flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-[#d9fb06]" />
+                  <div className="w-11 h-11 bg-[#d1d5db] rounded-lg flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-[#3b82f6]" />
                   </div>
-                  <span className="text-xs text-[#888680] uppercase tracking-wider">{metric.delta}</span>
+                  <span className="text-xs text-[#4b5563] uppercase tracking-wider">{metric.delta}</span>
                 </div>
 
-                <p className="text-[#888680] text-xs uppercase tracking-widest">{item.label}</p>
-                <p className="text-4xl font-black text-white mt-2">
+                <p className="text-[#4b5563] text-xs uppercase tracking-widest">{item.label}</p>
+                <p className="text-4xl font-black text-[#111827] mt-2">
                   <AnimatedNumber target={target} format={item.format} />
                 </p>
 
                 <div className="mt-5">
-                  <div className="h-2 bg-[#1a1c1b] rounded-full overflow-hidden border border-[#3f4816]/40">
+                  <div className="h-2 bg-[#ffffff] rounded-full overflow-hidden border border-[#d1d5db]/40">
                     <div
-                      className="h-full bg-[#d9fb06] rounded-full transition-all duration-700"
+                      className="h-full bg-[#3b82f6] rounded-full transition-all duration-700"
                       style={{ width: `${progress}%` }}
                       aria-hidden="true"
                     />

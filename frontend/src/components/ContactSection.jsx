@@ -94,15 +94,15 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-[#302f2c]">
+    <section id="contact" className="py-24 bg-[#f3f4f6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
-            Let's <span className="text-[#888680]">Connect</span>
+          <span className="text-[#3b82f6] text-sm font-semibold uppercase tracking-widest">Get In Touch</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] mt-4">
+            Let's <span className="text-[#4b5563]">Connect</span>
           </h2>
-          <p className="text-[#888680] mt-4 max-w-2xl mx-auto">
+          <p className="text-[#4b5563] mt-4 max-w-2xl mx-auto">
             Interested in discussing cybersecurity opportunities or collaborating on security projects? I'd love to hear from you.
           </p>
         </div>
@@ -117,13 +117,13 @@ const ContactSection = () => {
                   href={item.href}
                   target={item.label === 'LinkedIn' ? '_blank' : undefined}
                   rel={item.label === 'LinkedIn' ? 'noopener noreferrer' : undefined}
-                  className="group p-6 bg-[#1a1c1b] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300"
+                  className="group p-6 bg-[#ffffff] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-[#3f4816] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#d9fb06] transition-colors duration-300">
-                    <item.icon className="w-6 h-6 text-[#d9fb06] group-hover:text-[#1a1c1b] transition-colors duration-300" />
+                  <div className="w-12 h-12 bg-[#d1d5db] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#3b82f6] transition-colors duration-300">
+                    <item.icon className="w-6 h-6 text-[#3b82f6] group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <p className="text-[#888680] text-sm mb-1">{item.label}</p>
-                  <p className="text-white font-medium group-hover:text-[#d9fb06] transition-colors">
+                  <p className="text-[#4b5563] text-sm mb-1">{item.label}</p>
+                  <p className="text-[#111827] font-medium group-hover:text-[#3b82f6] transition-colors">
                     {item.value}
                   </p>
                 </a>
@@ -131,19 +131,19 @@ const ContactSection = () => {
             </div>
 
             {/* Quick CTA */}
-            <div className="p-8 bg-[#1a1c1b] rounded-2xl border border-[#3f4816]">
-              <h3 className="text-xl font-bold text-white mb-4">Open to Opportunities</h3>
-              <p className="text-[#888680] mb-6">
+            <div className="p-8 bg-[#ffffff] rounded-2xl border border-[#d1d5db]">
+              <h3 className="text-xl font-bold text-[#111827] mb-4">Open to Opportunities</h3>
+              <p className="text-[#4b5563] mb-6">
                 Currently available for full-time cybersecurity roles, consulting projects, and speaking engagements.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-[#3f4816] text-[#d9fb06] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-[#d1d5db] text-[#3b82f6] rounded-full text-sm font-medium">
                   SOC Analyst
                 </span>
-                <span className="px-4 py-2 bg-[#3f4816] text-[#d9fb06] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-[#d1d5db] text-[#3b82f6] rounded-full text-sm font-medium">
                   Security Engineer
                 </span>
-                <span className="px-4 py-2 bg-[#3f4816] text-[#d9fb06] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-[#d1d5db] text-[#3b82f6] rounded-full text-sm font-medium">
                   Threat Hunter
                 </span>
               </div>
@@ -151,66 +151,66 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 bg-[#1a1c1b] rounded-2xl border border-[#3f4816]">
+          <div className="p-8 bg-[#ffffff] rounded-2xl border border-[#d1d5db]">
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                <div className="w-16 h-16 bg-[#d9fb06] rounded-full flex items-center justify-center mb-6">
-                  <Send className="w-8 h-8 text-[#1a1c1b]" />
+                <div className="w-16 h-16 bg-[#3b82f6] rounded-full flex items-center justify-center mb-6">
+                  <Send className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-[#888680]">Thank you for reaching out. I'll get back to you soon.</p>
+                <h3 className="text-2xl font-bold text-[#111827] mb-2">Message Sent!</h3>
+                <p className="text-[#4b5563]">Thank you for reaching out. I'll get back to you soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#888680] text-sm mb-2">Your Name</label>
+                    <label className="block text-[#4b5563] text-sm mb-2">Your Name</label>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#302f2c] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors"
+                      className="w-full px-4 py-3 bg-[#f3f4f6] border border-[#d1d5db] rounded-lg text-[#111827] placeholder-[#9ca3af] focus:outline-none focus:border-[#3b82f6] transition-colors"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
-                    <label className="block text-[#888680] text-sm mb-2">Your Email</label>
+                    <label className="block text-[#4b5563] text-sm mb-2">Your Email</label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-[#302f2c] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors"
+                      className="w-full px-4 py-3 bg-[#f3f4f6] border border-[#d1d5db] rounded-lg text-[#111827] placeholder-[#9ca3af] focus:outline-none focus:border-[#3b82f6] transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-[#888680] text-sm mb-2">Subject</label>
+                  <label className="block text-[#4b5563] text-sm mb-2">Subject</label>
                   <input
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-[#302f2c] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors"
+                    className="w-full px-4 py-3 bg-[#f3f4f6] border border-[#d1d5db] rounded-lg text-[#111827] placeholder-[#9ca3af] focus:outline-none focus:border-[#3b82f6] transition-colors"
                     placeholder="Job Opportunity / Collaboration"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[#888680] text-sm mb-2">Message</label>
+                  <label className="block text-[#4b5563] text-sm mb-2">Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-[#302f2c] border border-[#3f4816] rounded-lg text-white placeholder-[#888680] focus:outline-none focus:border-[#d9fb06] transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-[#f3f4f6] border border-[#d1d5db] rounded-lg text-[#111827] placeholder-[#9ca3af] focus:outline-none focus:border-[#3b82f6] transition-colors resize-none"
                     placeholder="Tell me about your project or opportunity..."
                   />
                 </div>
@@ -218,11 +218,11 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#d9fb06] text-[#1a1c1b] rounded-full font-bold text-sm uppercase tracking-wider hover:scale-105 transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#3b82f6] text-white rounded-full font-bold text-sm uppercase tracking-wider hover:scale-105 transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-[#1a1c1b] border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       Sending...
                     </>
                   ) : (

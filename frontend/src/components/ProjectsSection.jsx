@@ -26,14 +26,14 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-[#1a1c1b]">
+    <section id="projects" className="py-20 bg-[#ffffff]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            SOC Projects & <span className="text-[#d9fb06]">Security Solutions</span>
+          <h2 className="text-4xl font-bold text-[#111827] mb-4">
+            SOC Projects & <span className="text-[#3b82f6]">Security Solutions</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-[#6b7280] max-w-2xl mx-auto">
             Hands-on cybersecurity projects demonstrating expertise in threat detection, incident response, and security automation
           </p>
         </div>
@@ -46,8 +46,8 @@ const ProjectsSection = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 selectedCategory === category
-                  ? 'bg-[#d9fb06] text-[#1a1c1b]'
-                  : 'bg-[#302f2c] text-gray-300 hover:bg-[#3d3c38]'
+                  ? 'bg-[#3b82f6] text-white'
+                  : 'bg-[#f3f4f6] text-[#9ca3af] hover:bg-[#e5e7eb]'
               }`}
             >
               {category}
@@ -60,16 +60,16 @@ const ProjectsSection = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-[#302f2c] rounded-xl p-6 hover:shadow-xl hover:shadow-[#d9fb06]/10 transition-all duration-300 border border-[#3d3c38] hover:border-[#d9fb06]/30 group"
+              className="bg-[#f3f4f6] rounded-xl p-6 hover:shadow-xl hover:shadow-[#3b82f6]/10 transition-all duration-300 border border-[#e5e7eb] hover:border-[#3b82f6]/30 group"
             >
               {/* Project Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-[#d9fb06]/10 rounded-lg text-[#d9fb06]">
+                  <div className="p-2 bg-[#3b82f6]/10 rounded-lg text-[#3b82f6]">
                     {getCategoryIcon(project.category)}
                   </div>
                   <div>
-                    <span className="text-xs text-[#d9fb06] font-medium">{project.category}</span>
+                    <span className="text-xs text-[#3b82f6] font-medium">{project.category}</span>
                     <div className="flex items-center gap-2 mt-1">
                       <span className={`text-xs px-2 py-1 rounded ${
                         project.status === 'Production' 
@@ -84,12 +84,12 @@ const ProjectsSection = () => {
               </div>
 
               {/* Project Title */}
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#d9fb06] transition-colors">
+              <h3 className="text-xl font-bold text-[#111827] mb-3 group-hover:text-[#3b82f6] transition-colors">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+              <p className="text-[#6b7280] text-sm mb-4 line-clamp-3">
                 {project.description}
               </p>
 
@@ -98,24 +98,24 @@ const ProjectsSection = () => {
                 {project.technologies.slice(0, 4).map((tech, index) => (
                   <span
                     key={index}
-                    className="text-xs px-3 py-1 bg-[#1a1c1b] text-gray-300 rounded-full"
+                    className="text-xs px-3 py-1 bg-[#ffffff] text-[#9ca3af] rounded-full"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.technologies.length > 4 && (
-                  <span className="text-xs px-3 py-1 bg-[#1a1c1b] text-gray-400 rounded-full">
+                  <span className="text-xs px-3 py-1 bg-[#ffffff] text-[#6b7280] rounded-full">
                     +{project.technologies.length - 4} more
                   </span>
                 )}
               </div>
 
               {/* Key Metrics */}
-              <div className="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-[#3d3c38]">
+              <div className="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-[#e5e7eb]">
                 {Object.entries(project.metrics).slice(0, 2).map(([key, value], index) => (
                   <div key={index} className="text-center">
-                    <div className="text-[#d9fb06] font-bold text-sm">{value}</div>
-                    <div className="text-gray-500 text-xs capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                    <div className="text-[#3b82f6] font-bold text-sm">{value}</div>
+                    <div className="text-[#6b7280] text-xs capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </div>
                 ))}
               </div>
@@ -124,8 +124,8 @@ const ProjectsSection = () => {
               <div className="mb-4">
                 <ul className="space-y-2">
                   {project.highlights.slice(0, 2).map((highlight, index) => (
-                    <li key={index} className="text-xs text-gray-400 flex items-start gap-2">
-                      <span className="text-[#d9fb06] mt-1">•</span>
+                    <li key={index} className="text-xs text-[#6b7280] flex items-start gap-2">
+                      <span className="text-[#3b82f6] mt-1">•</span>
                       <span className="line-clamp-2">{highlight}</span>
                     </li>
                   ))}
@@ -138,12 +138,12 @@ const ProjectsSection = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#d9fb06] text-[#1a1c1b] rounded-lg font-medium hover:bg-[#c8ea05] transition-colors"
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#3b82f6] text-white rounded-lg font-medium hover:bg-[#2563eb] transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   <span className="text-sm">View Code</span>
                 </a>
-                <button className="p-2 bg-[#1a1c1b] text-[#d9fb06] rounded-lg hover:bg-[#252624] transition-colors">
+                <button className="p-2 bg-[#ffffff] text-[#3b82f6] rounded-lg hover:bg-[#f3f4f6] transition-colors">
                   <ExternalLink className="w-4 h-4" />
                 </button>
               </div>
@@ -154,31 +154,31 @@ const ProjectsSection = () => {
         {/* Empty State */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400">No projects found in this category.</p>
+            <p className="text-[#6b7280]">No projects found in this category.</p>
           </div>
         )}
 
         {/* Stats Summary */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-[#302f2c] rounded-xl border border-[#3d3c38]">
-            <div className="text-3xl font-bold text-[#d9fb06] mb-2">{profileData.projects.length}</div>
-            <div className="text-gray-400 text-sm">Total Projects</div>
+          <div className="text-center p-6 bg-[#f3f4f6] rounded-xl border border-[#e5e7eb]">
+            <div className="text-3xl font-bold text-[#3b82f6] mb-2">{profileData.projects.length}</div>
+            <div className="text-[#6b7280] text-sm">Total Projects</div>
           </div>
-          <div className="text-center p-6 bg-[#302f2c] rounded-xl border border-[#3d3c38]">
-            <div className="text-3xl font-bold text-[#d9fb06] mb-2">
+          <div className="text-center p-6 bg-[#f3f4f6] rounded-xl border border-[#e5e7eb]">
+            <div className="text-3xl font-bold text-[#3b82f6] mb-2">
               {profileData.projects.filter(p => p.status === 'Production').length}
             </div>
-            <div className="text-gray-400 text-sm">In Production</div>
+            <div className="text-[#6b7280] text-sm">In Production</div>
           </div>
-          <div className="text-center p-6 bg-[#302f2c] rounded-xl border border-[#3d3c38]">
-            <div className="text-3xl font-bold text-[#d9fb06] mb-2">
+          <div className="text-center p-6 bg-[#f3f4f6] rounded-xl border border-[#e5e7eb]">
+            <div className="text-3xl font-bold text-[#3b82f6] mb-2">
               {new Set(profileData.projects.flatMap(p => p.technologies)).size}
             </div>
-            <div className="text-gray-400 text-sm">Technologies Used</div>
+            <div className="text-[#6b7280] text-sm">Technologies Used</div>
           </div>
-          <div className="text-center p-6 bg-[#302f2c] rounded-xl border border-[#3d3c38]">
-            <div className="text-3xl font-bold text-[#d9fb06] mb-2">4</div>
-            <div className="text-gray-400 text-sm">Security Domains</div>
+          <div className="text-center p-6 bg-[#f3f4f6] rounded-xl border border-[#e5e7eb]">
+            <div className="text-3xl font-bold text-[#3b82f6] mb-2">4</div>
+            <div className="text-[#6b7280] text-sm">Security Domains</div>
           </div>
         </div>
       </div>

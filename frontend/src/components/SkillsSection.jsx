@@ -25,13 +25,13 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-24 bg-[#302f2c]">
+    <section id="skills" className="py-24 bg-[#f3f4f6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[#d9fb06] text-sm font-semibold uppercase tracking-widest">Expertise</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
-            Skills & <span className="text-[#888680]">Capabilities</span>
+          <span className="text-[#3b82f6] text-sm font-semibold uppercase tracking-widest">Expertise</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] mt-4">
+            Skills & <span className="text-[#4b5563]">Capabilities</span>
           </h2>
         </div>
 
@@ -43,8 +43,8 @@ const SkillsSection = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-[#d9fb06] text-[#1a1c1b]'
-                  : 'bg-[#1a1c1b] text-[#888680] border border-[#3f4816] hover:border-[#d9fb06] hover:text-[#d9fb06]'
+                  ? 'bg-[#3b82f6] text-white'
+                  : 'bg-[#ffffff] text-[#4b5563] border border-[#d1d5db] hover:border-[#3b82f6] hover:text-[#3b82f6]'
               }`}
             >
               <tab.icon className="w-4 h-4" />
@@ -58,12 +58,12 @@ const SkillsSection = () => {
           {getSkills().map((skill, index) => (
             <div
               key={index}
-              className="group p-4 bg-[#1a1c1b] rounded-xl border border-[#3f4816]/50 hover:border-[#d9fb06] transition-all duration-300 cursor-default"
+              className="group p-4 bg-[#ffffff] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-all duration-300 cursor-default"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-[#d9fb06] rounded-full group-hover:scale-150 transition-transform duration-300" />
-                <span className="text-white font-medium group-hover:text-[#d9fb06] transition-colors duration-300">
+                <div className="w-2 h-2 bg-[#3b82f6] rounded-full group-hover:scale-150 transition-transform duration-300" />
+                <span className="text-[#111827] font-medium group-hover:text-[#3b82f6] transition-colors duration-300">
                   {skill}
                 </span>
               </div>
@@ -72,19 +72,19 @@ const SkillsSection = () => {
         </div>
 
         {/* Skill Highlight */}
-        <div className="mt-16 p-8 bg-[#1a1c1b] rounded-2xl border border-[#3f4816]">
+        <div className="mt-16 p-8 bg-[#ffffff] rounded-2xl border border-[#d1d5db]">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-black text-[#d9fb06] mb-2">SIEM</div>
-              <div className="text-[#888680]">Splunk Enterprise Expert</div>
+              <div className="text-4xl font-black text-[#3b82f6] mb-2">SIEM</div>
+              <div className="text-[#4b5563]">Splunk Enterprise Expert</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-[#d9fb06] mb-2">SOC</div>
-              <div className="text-[#888680]">Blue Team Operations</div>
+              <div className="text-4xl font-black text-[#3b82f6] mb-2">SOC</div>
+              <div className="text-[#4b5563]">Blue Team Operations</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-[#d9fb06] mb-2">ML</div>
-              <div className="text-[#888680]">Predictive Analytics</div>
+              <div className="text-4xl font-black text-[#3b82f6] mb-2">ML</div>
+              <div className="text-[#4b5563]">Predictive Analytics</div>
             </div>
           </div>
         </div>
