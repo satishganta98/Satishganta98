@@ -99,10 +99,10 @@ const SOCDashboardSection = () => {
             return (
               <article
                 key={item.metricId}
-                className="p-6 bg-[#ffffff] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-colors"
+                className="p-6 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 hover:border-[#3b82f6]/40 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-11 h-11 bg-[#d1d5db] rounded-lg flex items-center justify-center">
+                  <div className="w-11 h-11 bg-[#3b82f6]/10 rounded-lg flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[#3b82f6]" />
                   </div>
                   <span className="text-xs text-[#4b5563] uppercase tracking-wider">{metric.delta}</span>
@@ -114,9 +114,9 @@ const SOCDashboardSection = () => {
                 </p>
 
                 <div className="mt-5">
-                  <div className="h-2 bg-[#ffffff] rounded-full overflow-hidden border border-[#d1d5db]/40">
+                  <div className="h-2 bg-[#e5e7eb] rounded-full overflow-hidden border border-[#d1d5db]/40">
                     <div
-                      className="h-full bg-[#3b82f6] rounded-full transition-all duration-700"
+                      className="h-full bg-gradient-to-r from-[#3b82f6] to-[#1f40af] rounded-full transition-all duration-700"
                       style={{ width: `${progress}%` }}
                       aria-hidden="true"
                     />

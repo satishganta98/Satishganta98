@@ -26,8 +26,51 @@ body {
   font-family: 'Inter', 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, var(--prof-bg-light) 0%, #fafbfc 50%, var(--prof-surface) 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 40%, #ffffff 100%);
   color: var(--prof-text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background orbs */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -15%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
 }
 
 h1, h2, h3, h4 {
@@ -90,8 +133,36 @@ button, a, input, select, textarea {
   transition: all 0.3s ease;
 }
 
-/* Professional card styling */
+/* Professional card styling - Glassmorphism Effect */
 .card, [class*="border"] {
   border-color: var(--prof-border-light) !important;
+}
+
+/* Glassmorphic card mixin - applied to common card patterns */
+[class*="rounded-xl"][class*="p-6"],
+[class*="rounded-xl"][class*="p-4"],
+.project-card,
+.skill-card,
+.cert-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effect for glassmorphic cards */
+[class*="rounded-xl"][class*="p-6"]:hover,
+[class*="rounded-xl"][class*="p-4"]:hover,
+.project-card:hover,
+.skill-card:hover,
+.cert-card:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  transform: translateY(-2px);
 }
 

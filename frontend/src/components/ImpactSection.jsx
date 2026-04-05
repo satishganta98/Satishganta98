@@ -40,7 +40,7 @@ const ImpactSection = () => {
           {profileData.impactMetrics.map((metric) => (
             <article
               key={metric.id}
-              className="p-6 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-colors"
+              className="p-6 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 hover:border-[#3b82f6]/40 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="w-11 h-11 bg-[#d1d5db] rounded-lg flex items-center justify-center">

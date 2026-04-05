@@ -24,9 +24,9 @@ const SectionLoader = () => (
 
 function App() {
   return (
-    <div className="App bg-[#f8f9fa] min-h-screen">
+    <div className="App bg-[#f8f9fa] min-h-screen relative z-1">
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <Suspense fallback={<SectionLoader />}>
           <AboutSection />

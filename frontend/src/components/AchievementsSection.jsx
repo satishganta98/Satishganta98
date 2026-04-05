@@ -30,7 +30,7 @@ const AchievementsSection = () => {
             return (
               <article
                 key={achievement.title}
-                className="p-6 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6] transition-all duration-300 hover:-translate-y-1"
+                className="p-6 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 hover:border-[#3b82f6]/40 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 {achievement.image && !imageLoadError[achievement.title] && (
                   <img

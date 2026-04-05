@@ -51,15 +51,15 @@ const AboutSection = () => {
             
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center p-4 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50">
+              <div className="text-center p-4 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 shadow-lg">
                 <div className="text-3xl font-black text-[#3b82f6]">7+</div>
                 <div className="text-sm text-[#4b5563] mt-1">Certifications</div>
               </div>
-              <div className="text-center p-4 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50">
+              <div className="text-center p-4 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 shadow-lg">
                 <div className="text-3xl font-black text-[#3b82f6]">15%</div>
                 <div className="text-sm text-[#4b5563] mt-1">Threat Reduction</div>
               </div>
-              <div className="text-center p-4 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50">
+              <div className="text-center p-4 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 shadow-lg">
                 <div className="text-3xl font-black text-[#3b82f6]">10+</div>
                 <div className="text-sm text-[#4b5563] mt-1">Weekly Incidents</div>
               </div>
@@ -71,7 +71,7 @@ const AboutSection = () => {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-[#f3f4f6] rounded-xl border border-[#d1d5db]/50 hover:border-[#3b82f6]/50 transition-all duration-300 group"
+                className="p-6 bg-white/60 backdrop-blur-md rounded-xl border border-[#3b82f6]/15 hover:border-[#3b82f6]/40 transition-all duration-300 group shadow-lg hover:shadow-xl"
               >
                 <div className="w-12 h-12 bg-[#d1d5db] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#3b82f6] transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-[#3b82f6] group-hover:text-white transition-colors duration-300" />

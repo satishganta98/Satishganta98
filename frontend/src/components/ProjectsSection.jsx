@@ -60,7 +60,7 @@ const ProjectsSection = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-[#f3f4f6] rounded-xl p-6 hover:shadow-xl hover:shadow-[#3b82f6]/10 transition-all duration-300 border border-[#e5e7eb] hover:border-[#3b82f6]/30 group"
+              className="bg-white/60 backdrop-blur-md rounded-xl p-6 hover:shadow-2xl hover:shadow-[#3b82f6]/15 transition-all duration-300 border border-[#3b82f6]/15 hover:border-[#3b82f6]/40 group"
             >
               {/* Project Header */}
               <div className="flex items-start justify-between mb-4">
