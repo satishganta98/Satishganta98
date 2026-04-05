@@ -1,3 +1,9 @@
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const certificatePath = (fileName) =>
+  BACKEND_URL
+    ? `${BACKEND_URL}/certificates/${fileName}`
+    : `${process.env.PUBLIC_URL || ""}/certificates/${fileName}`;
+
 export const profileData = {
   name: "Satish Kumar Ganta",
   title: "Cybersecurity Analyst & SOC Officer",
@@ -228,57 +234,57 @@ export const profileData = {
       name: "CompTIA Security+",
       issuer: "CompTIA",
       date: "Nov 2025",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("comptia-security-plus.pdf"),
+      certificateType: "pdf"
     },
     {
       id: 2,
       name: "CompTIA Network+",
       issuer: "CompTIA",
       date: "Nov 2025",
-      certificateUrl: null,
+      certificateUrl: certificatePath("comptia-network-plus.pdf"),
       badgeUrl: null,
-      certificateType: null
+      certificateType: "pdf"
     },
     {
       id: 3,
       name: "CompTIA CySA+ Certification",
       issuer: "CompTIA",
       date: "Dec 2025",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("comptia-cysa-plus.pdf"),
+      certificateType: "pdf"
     },
     {
       id: 4,
       name: "Splunk Certified Cybersecurity Defense Analyst",
       issuer: "Splunk",
       date: "Dec 2025",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("splunk-cybersecurity-defense-analyst.pdf"),
+      certificateType: "pdf"
     },
     {
       id: 5,
       name: "Career Essentials in System Administration",
       issuer: "Microsoft & LinkedIn",
       date: "Dec 2025",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("career-essentials-system-administration.pdf"),
+      certificateType: "pdf"
     },
     {
       id: 6,
       name: "CompTIA Security Analytics Professional – CSAP",
       issuer: "CompTIA",
       date: "Dec 2025",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("comptia-csap.pdf"),
+      certificateType: "pdf"
     },
     {
       id: 7,
       name: "SC-300 Identity and Access Administrator",
       issuer: "Microsoft",
       date: "Jan 2026",
-      certificateUrl: null,
-      certificateType: null
+      certificateUrl: certificatePath("microsoft-sc-300.pdf"),
+      certificateType: "pdf"
     }
   ]
 };

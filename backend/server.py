@@ -1,9 +1,11 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, UploadFile, File, HTTPException
+from fastapi.staticfiles import StaticFiles
 from fastapi.mail import FastMail, MessageSchema, ConnectionConfig
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
+import shutil
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
@@ -14,6 +16,20 @@ from datetime import datetime, timezone
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
+
+# Certificates storage directory (persists across restarts)
+CERTIFICATES_DIR = ROOT_DIR / "certificates"
+CERTIFICATES_DIR.mkdir(exist_ok=True)
+
+ALLOWED_CERT_FILENAMES = {
+    "comptia-security-plus.pdf",
+    "comptia-network-plus.pdf",
+    "comptia-cysa-plus.pdf",
+    "splunk-cybersecurity-defense-analyst.pdf",
+    "career-essentials-system-administration.pdf",
+    "comptia-csap.pdf",
+    "microsoft-sc-300.pdf",
+}
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
@@ -103,8 +119,49 @@ async def get_status_checks():
     
     return status_checks
 
+# ── Certificate upload / serve ──────────────────────────────────────────────
+
+@api_router.get("/certificates")
+async def list_certificates():
+    """Return availability status for every expected certificate."""
+    result = []
+    for fname in ALLOWED_CERT_FILENAMES:
+        path = CERTIFICATES_DIR / fname
+        result.append({
+            "filename": fname,
+            "available": path.exists(),
+        })
+    return result
+
+
+@api_router.post("/upload-certificate")
+async def upload_certificate(
+    file: UploadFile = File(...),
+    filename: str = "",
+):
+    """Upload a certificate PDF.  Pass the target filename as a query param
+    or leave blank to use the uploaded file's original name."""
+    target = filename.strip() or (file.filename or "").strip()
+    if not target:
+        raise HTTPException(status_code=400, detail="Filename is required.")
+    if target not in ALLOWED_CERT_FILENAMES:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid filename. Allowed values: {sorted(ALLOWED_CERT_FILENAMES)}",
+        )
+    dest = CERTIFICATES_DIR / target
+    with dest.open("wb") as f:
+        shutil.copyfileobj(file.file, f)
+    logger.info("Certificate uploaded: %s", target)
+    return {"status": "success", "filename": target}
+
+# ── Include router & mount static certificates ──────────────────────────────
+
 # Include the router in the main app
 app.include_router(api_router)
+
+# Serve uploaded certificates at  /certificates/<filename>
+app.mount("/certificates", StaticFiles(directory=str(CERTIFICATES_DIR)), name="certs")
 
 app.add_middleware(
     CORSMiddleware,

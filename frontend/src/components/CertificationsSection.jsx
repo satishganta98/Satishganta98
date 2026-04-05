@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Award, Calendar, ExternalLink, X, Download, Eye } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Award, Calendar, ExternalLink, X, Download, Eye, Upload, CheckCircle, AlertCircle } from 'lucide-react';
 import { profileData } from '../data/mock';
 import {
   Dialog,
@@ -8,9 +8,28 @@ import {
   DialogTitle,
 } from './ui/dialog';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const HAS_BACKEND = Boolean(BACKEND_URL);
+
+// Map cert id → expected filename (must match backend ALLOWED_CERT_FILENAMES)
+const CERT_FILENAME_MAP = {
+  1: "comptia-security-plus.pdf",
+  2: "comptia-network-plus.pdf",
+  3: "comptia-cysa-plus.pdf",
+  4: "splunk-cybersecurity-defense-analyst.pdf",
+  5: "career-essentials-system-administration.pdf",
+  6: "comptia-csap.pdf",
+  7: "microsoft-sc-300.pdf",
+};
+
 const CertificationsSection = () => {
   const [selectedCert, setSelectedCert] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Upload state
+  const [uploadingId, setUploadingId] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState({}); // { [certId]: 'success' | 'error' | null }
+  const fileInputRefs = useRef({});
 
   const handleCertClick = (cert) => {
     if (cert.certificateUrl) {
@@ -25,8 +44,54 @@ const CertificationsSection = () => {
     }
   };
 
+  const handleUploadClick = (e, certId) => {
+    e.stopPropagation();
+    if (!fileInputRefs.current[certId]) return;
+    fileInputRefs.current[certId].click();
+  };
+
+  const handleFileChange = async (e, cert) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const targetFilename = CERT_FILENAME_MAP[cert.id];
+    if (!targetFilename) return;
+
+    setUploadingId(cert.id);
+    setUploadStatus((prev) => ({ ...prev, [cert.id]: null }));
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const res = await fetch(
+        `${BACKEND_URL}/api/upload-certificate?filename=${encodeURIComponent(targetFilename)}`,
+        { method: "POST", body: formData }
+      );
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || "Upload failed");
+      }
+
+      setUploadStatus((prev) => ({ ...prev, [cert.id]: "success" }));
+      // Reload the page after a short delay so the new URL is fetched
+      setTimeout(() => window.location.reload(), 1200);
+    } catch (err) {
+      console.error(err);
+      setUploadStatus((prev) => ({ ...prev, [cert.id]: "error" }));
+    } finally {
+      setUploadingId(null);
+      // Reset input so the same file can be re-selected if needed
+      if (fileInputRefs.current[cert.id]) {
+        fileInputRefs.current[cert.id].value = "";
+      }
+    }
+  };
+
   return (
     <section id="certifications" className="py-24 bg-[#1a1c1b]">
+      <span id="certificates" className="block relative -top-24" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Section Header */}
         <div className="mb-16">
@@ -35,7 +100,7 @@ const CertificationsSection = () => {
             <span className="px-3 py-1 bg-[#d9fb06] text-[#1a1c1b] text-xs font-bold rounded-full">{profileData.certifications.length}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mt-4">
-            Professional <span className="text-[#888680]">Certifications</span>
+            Professional <span className="text-[#888680]">Certificates</span>
           </h2>
           <p className="text-[#888680] mt-4 max-w-2xl">
             Industry-recognized certifications validating expertise in cybersecurity, networking, and cloud technologies. Click on any certificate to view the original credential.
@@ -86,6 +151,50 @@ const CertificationsSection = () => {
                   </span>
                 )}
               </div>
+
+              {/* Upload row – only shown when a backend API is available */}
+              {HAS_BACKEND && <div className="mt-4 pt-4 border-t border-[#3f4816]/50">
+                {/* Hidden file input */}
+                <input
+                  ref={(el) => { fileInputRefs.current[cert.id] = el; }}
+                  type="file"
+                  accept=".pdf,application/pdf"
+                  className="hidden"
+                  onClick={(e) => e.stopPropagation()}
+                  onChange={(e) => handleFileChange(e, cert)}
+                />
+
+                <button
+                  onClick={(e) => handleUploadClick(e, cert.id)}
+                  disabled={uploadingId === cert.id}
+                  className="flex items-center gap-2 text-xs font-semibold text-[#888680] hover:text-[#d9fb06] transition-colors disabled:opacity-50"
+                >
+                  {uploadingId === cert.id ? (
+                    <>
+                      <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
+                      </svg>
+                      Uploading…
+                    </>
+                  ) : uploadStatus[cert.id] === 'success' ? (
+                    <>
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-green-400">Uploaded!</span>
+                    </>
+                  ) : uploadStatus[cert.id] === 'error' ? (
+                    <>
+                      <AlertCircle className="w-4 h-4 text-red-400" />
+                      <span className="text-red-400">Failed – retry</span>
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="w-4 h-4" />
+                      Upload PDF
+                    </>
+                  )}
+                </button>
+              </div>}
             </div>
           ))}
         </div>
