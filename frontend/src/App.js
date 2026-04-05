@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 
 const AboutSection = lazy(() => import("./components/AboutSection"));
+const AchievementsSection = lazy(() => import("./components/AchievementsSection"));
 const SkillsSection = lazy(() => import("./components/SkillsSection"));
 const ExperienceSection = lazy(() => import("./components/ExperienceSection"));
 const EducationSection = lazy(() => import("./components/EducationSection"));
@@ -27,6 +28,7 @@ function App() {
         <HeroSection />
         <Suspense fallback={<SectionLoader />}>
           <AboutSection />
+          <AchievementsSection />
           <SkillsSection />
           <ExperienceSection />
           <EducationSection />
