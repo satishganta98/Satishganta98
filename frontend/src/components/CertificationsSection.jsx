@@ -143,21 +143,26 @@ const CertificationsSection = () => {
                 )}
               </div>
 
-              <div className="mb-2 min-h-[80px] flex items-center">
+              <div className="mb-2 min-h-[80px] flex flex-col items-start justify-center gap-1">
                 {cert.badgeLogo && !logoLoadError[`badge-${cert.id}`] ? (
-                  <img
-                    src={cert.badgeLogo}
-                    alt={`${cert.name} badge`}
-                    className="h-[72px] md:h-[88px] w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                    decoding="async"
-                    onError={() =>
-                      setLogoLoadError((prev) => ({
-                        ...prev,
-                        [`badge-${cert.id}`]: true,
-                      }))
-                    }
-                  />
+                  <>
+                    <img
+                      src={cert.badgeLogo}
+                      alt={`${cert.name} badge`}
+                      className="h-[72px] md:h-[88px] w-auto object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+                      loading="lazy"
+                      decoding="async"
+                      onError={() =>
+                        setLogoLoadError((prev) => ({
+                          ...prev,
+                          [`badge-${cert.id}`]: true,
+                        }))
+                      }
+                    />
+                    {cert.subtitle && (
+                      <span className="text-xs font-bold tracking-widest text-[#1B8D3E] uppercase mt-1 px-2 py-0.5 bg-[#1B8D3E]/10 rounded-full">{cert.subtitle}</span>
+                    )}
+                  </>
                 ) : CUSTOM_ISSUER_LOGOS[cert.issuer] ? (
                   CUSTOM_ISSUER_LOGOS[cert.issuer]
                 ) : ISSUER_LOGO_MAP[cert.issuer] && !logoLoadError[`issuer-${cert.id}`] ? (
