@@ -12,11 +12,21 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
 const HAS_BACKEND = Boolean(BACKEND_URL);
 
 const ISSUER_LOGO_MAP = {
-  "CompTIA": "https://cdn.simpleicons.org/comptia/d9fb06",
-  "Splunk": "https://cdn.simpleicons.org/splunk/d9fb06",
-  "Microsoft": "https://cdn.simpleicons.org/microsoft/d9fb06",
-  "Microsoft & LinkedIn": "https://cdn.simpleicons.org/microsoft/d9fb06",
-  "NEBOSH": "https://cdn.simpleicons.org/nebosh/1B8D3E",
+  "CompTIA": "https://cdn.simpleicons.org/comptia/D71920",
+  "Splunk": "https://cdn.simpleicons.org/splunk/65A637",
+  "Microsoft": "https://cdn.simpleicons.org/microsoft/F25022",
+  "Microsoft & LinkedIn": "https://cdn.simpleicons.org/microsoft/0078D4",
+};
+
+// Custom SVG logos for issuers not available in SimpleIcons
+const CUSTOM_ISSUER_LOGOS = {
+  "NEBOSH": (
+    <div className="flex items-center justify-center w-full h-full">
+      <div style={{ background: 'linear-gradient(135deg, #1B8D3E 0%, #145f2a 100%)', borderRadius: '12px', padding: '10px 18px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '22px', letterSpacing: '2px', fontFamily: 'Inter, sans-serif' }}>NEBOSH</span>
+      </div>
+    </div>
+  ),
 };
 
 // Map cert id → expected filename (must match backend ALLOWED_CERT_FILENAMES)
@@ -156,6 +166,8 @@ const CertificationsSection = () => {
                       }))
                     }
                   />
+                ) : CUSTOM_ISSUER_LOGOS[cert.issuer] ? (
+                  CUSTOM_ISSUER_LOGOS[cert.issuer]
                 ) : ISSUER_LOGO_MAP[cert.issuer] && !logoLoadError[`issuer-${cert.id}`] ? (
                   <img
                     src={ISSUER_LOGO_MAP[cert.issuer]}
