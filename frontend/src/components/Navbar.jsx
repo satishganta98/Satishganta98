@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Impact', href: '#impact' },
     { name: 'SOC Dashboard', href: '#soc-dashboard' },
+    { name: 'Threat Map', href: '#threat-map' },
     { name: 'Trust', href: '#trust-signals' },
     { name: 'Certificates', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
