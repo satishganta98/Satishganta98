@@ -18,16 +18,8 @@ const ISSUER_LOGO_MAP = {
   "Microsoft & LinkedIn": "https://cdn.simpleicons.org/microsoft/0078D4",
 };
 
-// Custom SVG logos for issuers not available in SimpleIcons
-const CUSTOM_ISSUER_LOGOS = {
-  "NEBOSH": (
-    <div className="flex items-center justify-center w-full h-full">
-      <div style={{ background: 'linear-gradient(135deg, #1B8D3E 0%, #145f2a 100%)', borderRadius: '12px', padding: '10px 18px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '22px', letterSpacing: '2px', fontFamily: 'Inter, sans-serif' }}>NEBOSH</span>
-      </div>
-    </div>
-  ),
-};
+// Custom logos for issuers not available in SimpleIcons
+const CUSTOM_ISSUER_LOGOS = {};
 
 // Map cert id → expected filename (must match backend ALLOWED_CERT_FILENAMES)
 const CERT_FILENAME_MAP = {
