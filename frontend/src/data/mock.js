@@ -351,7 +351,7 @@ export const profileData = {
       issuer: "NEBOSH",
       date: "Ongoing",
       certificateUrl: null,
-      badgeLogo: "https://www.credly.com/badges/placeholder",
+      badgeLogo: null,
       certificateType: "pdf",
       status: "In Progress",
       description: "International General Certificate in Occupational Health and Safety - focuses on health and safety in the workplace"

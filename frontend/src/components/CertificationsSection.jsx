@@ -249,11 +249,11 @@ const CertificationsSection = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="text-center px-6 py-3 bg-[#ffffff] rounded-xl">
-                <div className="text-3xl font-black text-[#3b82f6]">7</div>
-                <div className="text-xs text-[#4b5563] uppercase tracking-wider">Certifications</div>
-              </div>
-              <div className="text-center px-6 py-3 bg-[#ffffff] rounded-xl">
-                <div className="text-3xl font-black text-[#3b82f6]">4</div>
+              <div className="text-3xl font-black text-[#3b82f6]">8</div>
+              <div className="text-xs text-[#4b5563] uppercase tracking-wider">Certifications</div>
+            </div>
+            <div className="text-center px-6 py-3 bg-[#ffffff] rounded-xl">
+              <div className="text-3xl font-black text-[#3b82f6]">5</div>
                 <div className="text-xs text-[#4b5563] uppercase tracking-wider">Issuers</div>
               </div>
             </div>
