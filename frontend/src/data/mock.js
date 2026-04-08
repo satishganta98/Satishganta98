@@ -344,6 +344,17 @@ export const profileData = {
       certificateUrl: null,
       badgeLogo: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
       certificateType: "pdf"
+    },
+    {
+      id: 8,
+      name: "NEBOSH IGC - International General Certificate",
+      issuer: "NEBOSH",
+      date: "Ongoing",
+      certificateUrl: null,
+      badgeLogo: "https://cdn.simpleicons.org/nebosh/1B8D3E",
+      certificateType: "pdf",
+      status: "In Progress",
+      description: "International General Certificate in Occupational Health and Safety - focuses on health and safety in the workplace"
     }
   ]
 };
