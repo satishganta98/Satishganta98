@@ -349,7 +349,7 @@ export const profileData = {
       id: 8,
       name: "NEBOSH IGC - International General Certificate",
       issuer: "NEBOSH",
-      subtitle: "IGC",
+      subtitle: "International General Certificate",
       date: "Ongoing",
       certificateUrl: null,
       badgeLogo: "/Satishganta98/assets/nebosh-logo.gif",
