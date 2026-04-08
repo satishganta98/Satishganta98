@@ -351,7 +351,7 @@ export const profileData = {
       issuer: "NEBOSH",
       date: "Ongoing",
       certificateUrl: null,
-      badgeLogo: "https://cdn.simpleicons.org/nebosh/1B8D3E",
+      badgeLogo: "https://logo.clearbit.com/nebosh.org.uk",
       certificateType: "pdf",
       status: "In Progress",
       description: "International General Certificate in Occupational Health and Safety - focuses on health and safety in the workplace"
