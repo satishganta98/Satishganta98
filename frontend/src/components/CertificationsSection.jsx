@@ -16,6 +16,7 @@ const ISSUER_LOGO_MAP = {
   "Splunk": "https://cdn.simpleicons.org/splunk/d9fb06",
   "Microsoft": "https://cdn.simpleicons.org/microsoft/d9fb06",
   "Microsoft & LinkedIn": "https://cdn.simpleicons.org/microsoft/d9fb06",
+  "NEBOSH": "https://cdn.simpleicons.org/nebosh/1B8D3E",
 };
 
 // Map cert id → expected filename (must match backend ALLOWED_CERT_FILENAMES)
